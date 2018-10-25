@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_25_183731) do
+ActiveRecord::Schema.define(version: 2018_10_25_232729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -216,6 +216,131 @@ ActiveRecord::Schema.define(version: 2018_10_25_183731) do
     t.index ["media_id", "status", "id"], name: "index_pulitzer_media_versions_on_media_id_and_status_and_id"
     t.index ["media_id"], name: "index_pulitzer_media_versions_on_media_id"
     t.index ["user_id"], name: "index_pulitzer_media_versions_on_user_id"
+  end
+
+  create_table "scuttlebutt_messages", force: :cascade do |t|
+    t.bigint "recipient_id"
+    t.bigint "sender_id"
+    t.string "title"
+    t.text "content"
+    t.integer "status", default: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipient_id", "status"], name: "index_scuttlebutt_messages_on_recipient_id_and_status"
+    t.index ["recipient_id"], name: "index_scuttlebutt_messages_on_recipient_id"
+    t.index ["sender_id"], name: "index_scuttlebutt_messages_on_sender_id"
+  end
+
+  create_table "scuttlebutt_notifications", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "actor_id"
+    t.string "parent_obj_type"
+    t.bigint "parent_obj_id"
+    t.string "activity_obj_type"
+    t.bigint "activity_obj_id"
+    t.string "title"
+    t.text "content"
+    t.integer "status", default: 1
+    t.integer "parent_id"
+    t.integer "lft", null: false
+    t.integer "rgt", null: false
+    t.integer "seq"
+    t.integer "children_count", default: 0, null: false
+    t.string "action"
+    t.datetime "publish_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["action", "children_count", "status", "created_at"], name: "idx_notifications_action_count_status"
+    t.index ["action", "children_count", "status", "parent_obj_type", "created_at", "parent_obj_id"], name: "idx_notifications_action_count_status_parent_obj"
+    t.index ["activity_obj_id", "activity_obj_type", "user_id", "parent_obj_id", "parent_obj_type"], name: "idx_notifications_on_activity"
+    t.index ["activity_obj_type", "activity_obj_id"], name: "idx_notifications_on_act_obj"
+    t.index ["actor_id"], name: "index_scuttlebutt_notifications_on_actor_id"
+    t.index ["lft"], name: "index_scuttlebutt_notifications_on_lft"
+    t.index ["parent_id"], name: "index_scuttlebutt_notifications_on_parent_id"
+    t.index ["parent_obj_type", "parent_obj_id"], name: "idx_notifications_on_par_obj"
+    t.index ["rgt"], name: "index_scuttlebutt_notifications_on_rgt"
+    t.index ["user_id", "action", "children_count", "status", "created_at"], name: "idx_notifications_user_action_count_status"
+    t.index ["user_id", "action", "children_count", "status", "parent_obj_type", "created_at", "parent_obj_id"], name: "idx_notifications_user_action_count_status_parent_obj"
+    t.index ["user_id", "created_at", "status"], name: "idx_notifications_on_user"
+    t.index ["user_id", "parent_obj_id", "parent_obj_type"], name: "idx_notifications_on_parent"
+    t.index ["user_id"], name: "index_scuttlebutt_notifications_on_user_id"
+  end
+
+  create_table "scuttlebutt_posts", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "parent_obj_type"
+    t.bigint "parent_obj_id"
+    t.bigint "reply_to_id"
+    t.integer "lft"
+    t.integer "rgt"
+    t.string "type"
+    t.string "slug"
+    t.string "subject"
+    t.text "content"
+    t.integer "rating"
+    t.boolean "sticky", default: false
+    t.integer "seq"
+    t.bigint "cached_vote_count", default: 0
+    t.float "cached_vote_score", default: 0.0
+    t.bigint "cached_upvote_count", default: 0
+    t.bigint "cached_downvote_count", default: 0
+    t.integer "cached_subscribe_count", default: 0
+    t.integer "cached_impression_count", default: 0
+    t.float "computed_score", default: 0.0
+    t.integer "status", default: 1
+    t.integer "availability", default: 1
+    t.datetime "modified_at"
+    t.hstore "properties"
+    t.string "tags", default: [], array: true
+    t.string "mentions", default: [], array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "sanitized_content"
+    t.index ["created_at", "mentions"], name: "index_scuttlebutt_posts_on_created_at_and_mentions"
+    t.index ["mentions"], name: "index_scuttlebutt_posts_on_mentions", using: :gin
+    t.index ["parent_obj_type", "parent_obj_id"], name: "idx_posts_on_par_obj"
+    t.index ["reply_to_id"], name: "index_scuttlebutt_posts_on_reply_to_id"
+    t.index ["slug"], name: "index_scuttlebutt_posts_on_slug", unique: true
+    t.index ["tags"], name: "index_scuttlebutt_posts_on_tags", using: :gin
+    t.index ["updated_at", "mentions"], name: "index_scuttlebutt_posts_on_updated_at_and_mentions"
+    t.index ["user_id", "parent_obj_id", "parent_obj_type"], name: "idx_user_posts_on_parent"
+    t.index ["user_id"], name: "index_scuttlebutt_posts_on_user_id"
+  end
+
+  create_table "scuttlebutt_subscriptions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "parent_obj_type"
+    t.bigint "parent_obj_id"
+    t.bigint "category_id"
+    t.string "format", default: "site"
+    t.text "notification_contexts", default: [], array: true
+    t.integer "status", default: 1
+    t.integer "availability", default: 1
+    t.hstore "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_scuttlebutt_subscriptions_on_category_id"
+    t.index ["parent_obj_type", "parent_obj_id"], name: "idx_subs_on_par_obj"
+    t.index ["user_id", "parent_obj_id", "parent_obj_type"], name: "idx_subs_on_parent"
+    t.index ["user_id"], name: "index_scuttlebutt_subscriptions_on_user_id"
+  end
+
+  create_table "scuttlebutt_votes", force: :cascade do |t|
+    t.string "parent_obj_type"
+    t.bigint "parent_obj_id"
+    t.bigint "user_id"
+    t.integer "val", default: 0
+    t.string "vote_type"
+    t.string "context", default: "vote"
+    t.text "content"
+    t.hstore "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parent_obj_id", "parent_obj_type", "context"], name: "idx_votes_on_parent_context"
+    t.index ["parent_obj_type", "parent_obj_id"], name: "idx_votes_on_par_obj"
+    t.index ["user_id", "context"], name: "idx_votes_on_user_context"
+    t.index ["user_id", "parent_obj_id", "parent_obj_type"], name: "idx_votes_on_parent"
+    t.index ["user_id"], name: "index_scuttlebutt_votes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

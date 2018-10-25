@@ -1,0 +1,102 @@
+/ FOOTER
+%footer.footer.pt-80
+	.container
+		.row.mb-60
+			/ Logo
+			.col-md-3.col-sm-3.mb-xs-30
+				%a.footer-logo{:href => "home.html"}
+					%img{:src => image_path("logo-black.png")}/
+			/ Logo
+			/ Newsletter
+			.col-md-4.col-sm-5.mb-xs-30
+				.newsletter
+
+					= form_tag scuttlebutt.optins_path, method: 'POST', role: :form, class: 'form', id: 'newsletter_signup_form', remote: true  do |f|
+						= email_field_tag "message[email]", '', placeholder: 'Enter Your Email', class: 'newsletter-input input-md newsletter-input mb-0'
+						-# %input.newsletter-input.input-md.newsletter-input.mb-0{:placeholder => "Enter Your Email", :type => "email"}
+						%button.newsletter-btn.btn.btn-xs.btn-white{:type => "submit", :value => ""}
+							%i.fa.fa-angle-right.mr-0
+						-# .form-group
+							= text_field_tag "message[first_name]", '', placeholder: 'Enter first name', class: 'form-control'
+						-# .form-group
+							= submit_tag 'Subscribe', class: 'btn btn-default pull-right'
+					%form
+			/ End Newsletter
+			/ Social
+			.col-md-3.offset-md-2.col-sm-4
+				%ul.social
+					%li
+						%a{:href => "https://www.twitter.com/", :target => "_blank"}
+							%i.fab.fa-twitter
+					%li
+						%a{:href => "https://instagram.com/", :target => "_blank"}
+							%i.fab.fa-instagram
+					%li
+						%a{:href => "https://www.facebook.com/", :target => "_blank"}
+							%i.fab.fa-facebook
+					%li
+						%a{:href => "https://vimeo.com/", :target => "_blank"}
+							%i.fab.fa-vimeo-square
+					%li
+						%a{:href => "https://www.behance.net/", :target => "_blank"}
+							%i.fab.fa-behance
+			/ End Social
+		/ Footer Info
+		.row.footer-info.mb-60
+			.col-md-3.col-sm-12.mb-sm-30
+				%p.mb-xs-0 Breaking down barriers and sharing insights about the ketogenic diet.
+				%a.btn-link-a{:href => "/about"} Read More
+			.col-md-3.col-sm-6.mb-sm-30.mb-xs-0
+				%ul.link
+					%li
+						%a{:href => pulitzer.articles_path()} Blog
+					-#%li
+						%a{:href => main_app.recipes_path()} Recipes
+					%li
+						%a{:href => scuttlebutt.discussions_path()} Discussions
+					%li
+						- if current_user.present?
+							%a{:href => '/logout'} Logout
+						- else
+							%a{:href => '/login'} Login	Signup
+			.col-md-3.col-sm-6.mb-sm-30
+				%ul.link
+					%li
+						%a{:href => scuttlebutt.new_contact_path() } Contact Us
+					%li
+						%a{:href => "/faq"} FAQ
+					%li
+						%a{:href => "/about"} About
+					%li
+						%a{:href => "/"} Home
+			.col-md-3.col-sm-12
+				%p Del Mar, California, United States.
+				%ul.link-small
+					%li
+						%a{:href => "mailto:info@simpleketo.us"}
+							%i.fab.fa-envelope-o.left>
+							info@simpleketo.us
+					-# %li
+						%a
+							%i.fa.fa-phone.left>
+							+40 (0) 012 345 6789
+		/ End Footer Info
+		%hr/
+		/ Copyright Bar
+		%section.copyright.ptb-60
+			.container
+				%p
+					\© #{Time.current.year}
+					= succeed "." do
+						%a{ href: '/' }
+							%b #{Pulitzer.app_name}
+					%br/
+					Lovingly crafted by
+					%a{:href => "http://www.groundswellenterprises.com/", :target => "_blank"}
+						%b Groundswell Enterprises
+		/ End Copyright Bar
+	/ END FOOTER
+	/ Scroll Top
+	%a.scroll-top
+		%i.fa.fa-angle-double-up
+	/ End Scroll Top

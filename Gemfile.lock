@@ -24,6 +24,15 @@ GIT
       sitemap_generator
 
 GIT
+  remote: https://github.com/gkparishphilp/scuttlebutt.git
+  revision: 15defd5a96272647788a51146b7539a12129d2fb
+  branch: master
+  tag: v1.1.13
+  specs:
+    scuttlebutt (1.1.13)
+      rails (>= 5.2.0)
+
+GIT
   remote: https://github.com/gkparishphilp/swell_id.git
   revision: 298ec6b697c4165aa881576e8f52408da2817617
   branch: master
@@ -307,6 +316,7 @@ DEPENDENCIES
   rails (~> 5.2.1)
   route_downcaser
   sass-rails (~> 5.0)
+  scuttlebutt!
   selenium-webdriver
   sitemap_generator
   spring

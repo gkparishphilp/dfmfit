@@ -52,10 +52,12 @@ swell_engines_path = ENV['SWELL_ENGINE_PATH'] || '../engines'
 # Dev *****
 # gem 'swell_id', path: "#{swell_engines_path}/swell_id"
 # gem 'pulitzer', path: "#{swell_engines_path}/pulitzer"
+# gem 'scuttlebutt', path: "#{swell_engines_path}/scuttlebutt"
 
 # Prod *****
 gem 'swell_id', git: 'https://github.com/gkparishphilp/swell_id.git', :tag => "v1.0.1", :branch => 'master'
 gem 'pulitzer', git: 'https://github.com/gkparishphilp/pulitzer.git', :tag => "v1.2.1", :branch => 'master'
+gem 'scuttlebutt', git: 'https://github.com/gkparishphilp/scuttlebutt.git', :tag => "v1.1.13", :branch => 'master'
 
 
 
