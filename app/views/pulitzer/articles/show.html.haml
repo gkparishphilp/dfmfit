@@ -7,7 +7,7 @@
 			.container
 				.row.title
 					%h2.h2=@media.title
-					.page-breadcrumb
+					-#.page-breadcrumb
 						%a{ href: '/' }> Home
 						\/
 						%a{ href: pulitzer.articles_path() }> Blog
@@ -20,7 +20,7 @@
 			.container
 				.row.title
 					%h2.h2=@media.title
-					.page-breadcrumb
+					-#.page-breadcrumb
 						%a{ href: '/' }> Home
 						\/
 						%a{ href: pulitzer.articles_path() }> Blog
@@ -60,82 +60,8 @@
 									- unless tag == @media.tags.last
 										,
 					= render 'application/social', object: @media, args: { page: params[:page] }
-					-# .post-comment.mtb-30
-						%h4
-							Comments
-							%span.comment-numb (2)
-						%ul.comment-list.mt-30
-							%li
-								.comment-avatar
-									%img{:src => "img/user-av.jpg"}/
-								%div
-									.comment-detail
-										%h6 John Doe
-										.post-meta
-											%span March 16, 2015
-											|
-											%span
-												%a.comment-reply-btn
-													%i.fa.fa-reply>
-													Reply
-										%p Blandit vel, luctus pulvinar hendrerit id Maecenas tempus tellus eget lorem.
-									.comment-reply
-										.comment-avatar
-											%img{:src => "img/user-av.jpg"}/
-										%div
-											.comment-detail
-												%h6 John Doe
-												.post-meta
-													%span March 16, 2015
-													|
-													%span
-														%a.comment-reply-btn
-															%i.fa.fa-reply>
-															Reply
-												%p Blandit vel, luctus pulvinar hendrerit id Maecenas tempus tellus eget lorem.
-									.comment-reply
-										.comment-avatar
-											%img{:src => "img/user-av.jpg"}/
-										%div
-											.comment-detail
-												%h6 John Doe
-												.post-meta
-													%span March 16, 2015
-													|
-													%span
-														%a.comment-reply-btn
-															%i.fa.fa-reply>
-															Reply
-												%p Blandit vel, luctus pulvinar hendrerit id Maecenas tempus tellus eget lorem.
-							%li
-								.comment-avatar
-									%img{:src => "img/user-av.jpg"}/
-								%div
-									.comment-detail
-										%h6 John Doe
-										.post-meta
-											%span March 16, 2015
-											|
-											%span
-												%a.comment-reply-btn
-													%i.fa.fa-reply>
-													Reply
-										%p Blandit vel, luctus pulvinar hendrerit id Maecenas tempus tellus eget lorem.
-					-# .mtb-60
-						%h4 Leave a comment
-						.row.mt-30
-							%form.container
-								.row
-									.col-md-4
-										%input#name.input-lg.form-full{:name => "name", :placeholder => "Name", :required => "", :type => "text", :value => ""}/
-									.col-md-4
-										%input#email2.input-lg.form-full{:name => "email", :placeholder => "Email", :required => "", :type => "email", :value => ""}/
-									.col-md-4
-										%input#website.input-lg.form-full{:name => "website", :placeholder => "Website", :required => "", :type => "text", :value => ""}/
-									.col-md-12
-										%textarea#message.form-full{:name => "message", :placeholder => "Message", :required => ""}
-									.col-md-12
-										%button.btn.btn-lg.btn-black Post
+					
+					
 				/ End Post Bar
 				= render 'pulitzer/articles/side_bar'
 	/ End Blog Post Section
