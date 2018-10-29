@@ -24,6 +24,11 @@ class RootController < ApplicationController
 	end
 
 
+	def staff
+		
+	end
+
+
 	# route additional static pages not edited via wysiwyg here
 	# e.g.
 	# route '/about', to: 'root#about'
