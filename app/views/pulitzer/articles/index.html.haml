@@ -1,11 +1,12 @@
 /
 	CONTENT --------------------------------------------------------------------------------->
 	<!-- Intro Section
-%section.inner-intro.dark-bg.bg-image.overlay-dark.parallax.parallax-background1{"data-background-img" => ( @articles.first.try(:cover_image) || "https://www.healthline.com/hlcmsresource/images/Best-of-Books/3275-keto_tacos_1296x728-body1.jpg" ) }
+%section.inner-intro.dark-bg.bg-image.overlay-dark.parallax.parallax-background1{"data-background-img" => ( @articles.first.try(:cover_image) ) }
 	.container
 		.row.title
-			%h2.h2 Blog
-			.page-breadcrumb
+			%h2.h2 Workouts
+			
+			-#.page-breadcrumb
 				%a{ href: '/' } Home
 				\/
 				- if @tagged.present?

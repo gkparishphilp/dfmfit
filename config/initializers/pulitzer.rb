@@ -4,7 +4,7 @@ Pulitzer.configure do |config|
 
 	config.app_host = ENV['APP_DOMAIN'] || 'localhost:3003'
 
-	config.article_path = 'blog'
+	config.article_path = 'workouts'
 
 	config.default_protocol = 'https' unless Rails.env.development?
 
