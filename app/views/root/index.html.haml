@@ -7,7 +7,23 @@
 			%a{:href => '/'}
 				%img.logo-light{:alt => Pulitzer.app_name, :src => image_path("logo-white.png")}/
 				%img.logo-dark{:alt => Pulitzer.app_name, :src => image_path("logo-black.png")}/
+			
+
 		/ End Logo
+
+		.col-md-8.offset-md-2
+			.row
+				.col-md-3.col-sm-4.col-6
+					.page-icon-top
+						%a.link.ion.ion-social-instagram{:href => "https://www.instagram.com/", :target => "_blank"}
+				.col-md-3.col-sm-4.col-6
+					.page-icon-top
+						%a.link.ion-social-facebook{:href => "https://www.facebook.com/", :target => "_blank"}
+
+
+
+
+
 		/ Rightside Menu (Search, Cart, Bart icon)
 		.side-menu-btn
 			%ul
@@ -25,7 +41,9 @@
 				%li
 					%a{:href => "#about"} About
 				%li
-					%a{:href => "#workouts"} Workouts
+					%a{:href => "#workouts"} Services
+				%li
+					%a{:href => "#staff"} Staff
 				%li
 					%a{:href => "#contact-us"} Contact
 		/ End Navbar Navigation
@@ -67,7 +85,7 @@
 
 				%p.mb-35
 					We have a 2,400 square foot main facility and a 600 square foot private training annex. Our world-class training center has some of the best running routes in all of North County San Diego. Our gym uses barbells, kettlebells, dumbbells, jump ropes, slam balls, medicine balls, squat racks, pull up racks, and lots of other equipment. We have great tools at our disposal to generate great movement and help our athletes reach their potential.
-				
+
 
 / End About Section
 
@@ -94,11 +112,11 @@
 					%p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
 / End About Section 2
 
-
+/ Services Section
 %section#workouts.wow.fadeIn.ptb.ptb-sm-80.animated
 	.container
-		%h3.float-left.float-none-xs Latest WOD
-		%a.btn-link-a.float-right.float-none-xs{ href: pulitzer.articles_path() } View All
+		%h3.float-left.float-none-xs Services you offer: crossfit, personal training, kokoro , kids
+		-#%a.btn-link-a.float-right.float-none-xs{ href: pulitzer.articles_path() } View All
 		.clearfix
 		.spacer-60
 		.row
@@ -108,7 +126,23 @@
 					- unless index == 0
 						%hr
 					= render 'pulitzer/articles/blog_post', media: article, args: { mode: :thumb }
+/ End Services Section
 
+/ Staff Section
+%section#staff.wow.fadeIn.ptb.ptb-sm-80.animated
+	.container
+		%h3.float-left.float-none-xs STAFF
+		-#%a.btn-link-a.float-right.float-none-xs{ href: pulitzer.articles_path() } View All
+		.clearfix
+		.spacer-60
+		.row
+
+			- @articles.each_with_index do |article, index|
+				.col-lg-4.col-md-6.col-sm-6.mb-sm-30
+					- unless index == 0
+						%hr
+					= render 'pulitzer/articles/blog_post', media: article, args: { mode: :thumb }
+/ End of staff section
 
 
 
@@ -149,35 +183,34 @@
 / End Contact Form
 
 
-%section#social.gray-bg.ptb.ptb-sm-80
+-#%section#social.gray-bg.ptb.ptb-sm-80
 	.container.text-center
-		-#.row
-			.col-md-8.offset-md-2
-				%h3 Get In Touch
+		.row
+			-#.col-md-8.offset-md-2
+				-#%h3 Get In Touch
 		.spacer-60
 		.row
 			.col-md-8.offset-md-2
 				.row
 					.col-md-3.col-sm-4.col-6
 						.page-icon-top
-							%i.ion.ion-social-twitter
+							%i.ion.ion-social-instagram
 						%h6
-							%a.link{:href => "https://www.twitter.com/", :target => "_blank"} Twitter
+							%a.link{:href => "https://www.instagram.com/", :target => "_blank"} Instagram
 					.col-md-3.col-sm-4.col-6
 						.page-icon-top
 							%i.ion.ion-social-facebook
 						%h6
 							%a.link{:href => "https://www.facebook.com/", :target => "_blank"} Facebook
-					.col-md-3.col-sm-4.col-6
-						.page-icon-top
-							%i.ion.ion-social-googleplus
-						%h6
-							%a.link{:href => "https://plus.google.com/", :target => "_blank"} Google plus
-					.col-md-3.col-sm-4.col-6
-						.page-icon-top
-							%i.fab.fa-linkedin
-						%h6
-							%a.link{:href => "https://www.linkedin.com/", :target => "_blank"} Linkedin
 
 
-
+					-#.col-md-3.col-sm-4.col-6
+						-#.page-icon-top
+							-#%i.ion.ion-social-googleplus
+						-#%h6
+							-#%a.link{:href => "https://plus.google.com/", :target => "_blank"} Google plus
+					-#.col-md-3.col-sm-4.col-6
+						-#.page-icon-top
+							-#%i.fab.fa-linkedin
+						-#%h6
+							-#%a.link{:href => "https://www.linkedin.com/", :target => "_blank"} Linkedin
