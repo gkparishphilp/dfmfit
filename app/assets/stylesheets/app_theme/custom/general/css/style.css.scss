@@ -84,6 +84,7 @@ body {
 
 img {
     height: auto;
+
     max-width: 100%;
     border: none;
     outline: none;
@@ -95,6 +96,7 @@ img {
 
 a, a:focus, a:active, a:link, img {
     outline: none;
+
 }
 
 a {
@@ -1104,11 +1106,11 @@ form label.error {
 /*------------------------------------------------------------------*/
 .header {
     position: absolute;
-    text-align: center;
+    /*text-align: center;*/
     top: 0px;
     z-index: 1000;
     color: #fff;
-    width: 100%;
+    width: 115%;
     height: 94px;
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
     -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
@@ -1183,6 +1185,7 @@ form label.error {
     /*header nav style*/
     .header.header-prepare .nav-menu ul.nav-menu-inner > li > a {
         color: #323232;
+
     }
 
         .header.header-prepare .nav-menu ul.nav-menu-inner > li:hover > a,
@@ -1238,7 +1241,7 @@ form label.error {
         width: 132px;
         display: block;
         margin-top: 34px;
-        /*margin-bottom: 28px;*/
+        margin-bottom: 28px;
         transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
         -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
         -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
@@ -1298,7 +1301,7 @@ form label.error {
 .nav-menu ul.nav-menu-inner li a {
     font-family: inherit;
     display: block;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1;
     font-weight: 600;
     text-transform: uppercase;
@@ -2471,7 +2474,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 /* Icon          ||---------------------------- */
 /*-------------------------------------------------------------------------------------------*/
 .page-icon-top {
-    font-size: 50px;
+    font-size: 30px;
     line-height: 50px;
     padding-bottom: 20px;
     width: 100%;

@@ -2,29 +2,14 @@
 
 %header#header.header
 	.container
-		/ Logo
 		.logo
 			%a{:href => '/'}
 				%img.logo-light{:alt => Pulitzer.app_name, :src => image_path("logo-white.png")}/
 				%img.logo-dark{:alt => Pulitzer.app_name, :src => image_path("logo-black.png")}/
-			
-
-		/ End Logo
-
-		.col-md-8.offset-md-2
-			.row
-				.col-md-3.col-sm-4.col-6
-					.page-icon-top
-						%a.link.ion.ion-social-instagram{:href => "https://www.instagram.com/", :target => "_blank"}
-				.col-md-3.col-sm-4.col-6
-					.page-icon-top
-						%a.link.ion-social-facebook{:href => "https://www.facebook.com/", :target => "_blank"}
 
 
 
-
-
-		/ Rightside Menu (Search, Cart, Bart icon)
+		/ Rightside menu
 		.side-menu-btn
 			%ul
 				/ Sidebar Menu Icon
@@ -33,9 +18,18 @@
 						%span
 				/ End Sidebar Menu Icon
 		/ End Rightside Menu
+
+
 		/ Navbar Navigation
-		.nav-menu.singlepage-nav{:style => "max-height: 308px;"}
+
+		.ul.aria.label
+
+		.nav-menu.singlepage-nav
 			%ul.nav-menu-inner
+				%li
+					%a.link.ion.ion-social-instagram{:href => "https://www.instagram.com/", :target => "_blank"}
+				%li
+					%a.link.ion-social-facebook{:href => "https://www.facebook.com/", :target => "_blank"}
 				%li
 					%a{:href => "#intro"} Home
 				%li
@@ -46,9 +40,15 @@
 					%a{:href => "#staff"} Staff
 				%li
 					%a{:href => "#contact-us"} Contact
-		/ End Navbar Navigation
+
+
+
+
 
 = render 'application/flash', args: {}
+
+
+
 / Intro
 %section#intro.intro
 	/ Static Intro
@@ -68,6 +68,9 @@
 	/ End Static Intro
 / End Intro
 .clearfix
+
+
+
 / About Section
 %section#about.wow.fadeIn.ptb.ptb-sm-80.animated
 	.container.mb-60
