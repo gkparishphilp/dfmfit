@@ -7,7 +7,7 @@ class RootController < ApplicationController
 
 	# this is the homepage!
 	def index
-		@articles = Pulitzer::Article.published.order( created_at: :desc ).limit( 5 )
+		@articles = Pulitzer::Article.published.order( created_at: :desc ).limit( 15 )
 		render layout: 'homepage'
 	end
 
@@ -25,8 +25,10 @@ class RootController < ApplicationController
 
 
 	def staff
-		
+
 	end
+
+
 
 
 	# route additional static pages not edited via wysiwyg here

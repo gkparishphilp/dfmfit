@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 	root to: 'root#index' # homepage
 
 	resources :admin
+	resources :schedule
+	resources :workout
+	resources :dropins
+	resources :memberships
 
 	get '/staff', to: 'root#staff'
 
@@ -10,6 +14,7 @@ Rails.application.routes.draw do
 		get '/logout' => 'sessions#destroy', as: 'logout'
 		get '/register' => 'registrations#new', as: 'register'
 	end
+
 	devise_for :users, :controllers => { :registrations => 'registrations', :sessions => 'sessions' }
 
 	mount SwellId::Engine, at: '/'
