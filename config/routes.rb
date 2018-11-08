@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 	devise_scope :user do
 		get '/login' => 'sessions#new', as: 'login'
 		get '/logout' => 'sessions#destroy', as: 'logout'
-		get '/register' => 'registrations#new', as: 'register'
+		get '/users/sign_up' => 'registrations#new', as: 'new_user_registration'
 	end
 
 	devise_for :users, :controllers => { :registrations => 'registrations', :sessions => 'sessions' }

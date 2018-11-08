@@ -2,7 +2,7 @@ Pulitzer.configure do |config|
 
 	config.app_name = ENV['APP_NAME'] || 'Crossfit 2120'
 
-	config.app_host = ENV['APP_DOMAIN'] || 'localhost:3003'
+	config.app_host = ENV['APP_DOMAIN'] || 'localhost:3001'
 
 	config.article_path = 'workouts'
 

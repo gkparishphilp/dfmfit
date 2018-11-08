@@ -36,7 +36,7 @@
 												%a{ href: pulitzer.edit_article_admin_path( article ) }
 													= article.title
 
-							- if authorized?( Pulitzer::Page, controller: Pulitzer::PageAdminController, action: :index )
+							-# if authorized?( Pulitzer::Page, controller: Pulitzer::PageAdminController, action: :index )
 								%li.dropdown.dropdown-submenu
 									%a.dropdown-toggle{ href: '#', data: { toggle: :dropdown} }
 										Pages
