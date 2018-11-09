@@ -2,17 +2,21 @@ Rails.application.routes.draw do
 	root to: 'root#index' # homepage
 
 	resources :admin
-	resources :schedule
+	resources :events
 	resources :workout
 	resources :dropins
-	resources :memberships
+	#resources :membership
+	resources :waivers
 
 	get '/staff', to: 'root#staff'
+	get '/membership', to: 'root#membership'
+	
 
 	devise_scope :user do
-		get '/login' => 'sessions#new', as: 'login'
+		get 'users/sign_in' => 'sessions#new', as: 'sign_in'
 		get '/logout' => 'sessions#destroy', as: 'logout'
 		get '/users/sign_up' => 'registrations#new', as: 'new_user_registration'
+
 	end
 
 	devise_for :users, :controllers => { :registrations => 'registrations', :sessions => 'sessions' }

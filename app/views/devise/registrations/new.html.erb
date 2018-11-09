@@ -8,8 +8,8 @@
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name))  do |f| %>
 
+      <%= render 'devise/shared/error_messages' %>
 
-          <%= render 'devise/shared/error_messages' %>
 
           <div class='form-group'>
             <%= f.label :first_name, 'First name' %>
@@ -37,12 +37,12 @@
           </div>
 
           <%= f.submit yield(:button_text), class: 'btn btn-secondary' %>
+
+          <p style="font-weight: bold">Existing User? <%=link_to 'Sign In Now', user_session_path, class: 'btn btn-link' %></p>
       <% end %>
 
     </div>
   </div>
 </div>
-
-
 
 <%= render "devise/shared/links" %>

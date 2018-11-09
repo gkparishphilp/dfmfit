@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_25_232729) do
+ActiveRecord::Schema.define(version: 2018_11_08_043149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 2018_10_25_232729) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "day_of_week"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

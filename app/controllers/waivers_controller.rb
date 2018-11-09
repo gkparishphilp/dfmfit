@@ -1,5 +1,5 @@
-class WorkoutController < ApplicationController
-
+class WaiversController < ApplicationController
+  
   def index
   end
 

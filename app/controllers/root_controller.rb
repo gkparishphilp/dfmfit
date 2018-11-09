@@ -28,6 +28,11 @@ class RootController < ApplicationController
 
 	end
 
+	def membership
+	end 
+
+
+
 
 
 
