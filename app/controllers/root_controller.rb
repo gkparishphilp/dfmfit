@@ -24,15 +24,6 @@ class RootController < ApplicationController
 	end
 
 
-	def staff
-
-	end
-
-	def membership
-	end 
-
-
-
 
 
 

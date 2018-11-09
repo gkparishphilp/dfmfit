@@ -5,12 +5,7 @@ Rails.application.routes.draw do
 	resources :events
 	resources :workout
 	resources :dropins
-	#resources :membership
 	resources :waivers
-
-	get '/staff', to: 'root#staff'
-	get '/membership', to: 'root#membership'
-	
 
 	devise_scope :user do
 		get 'users/sign_in' => 'sessions#new', as: 'sign_in'
