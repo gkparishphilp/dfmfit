@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_043149) do
+ActiveRecord::Schema.define(version: 2018_11_10_000408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -400,6 +400,33 @@ ActiveRecord::Schema.define(version: 2018_11_08_043149) do
     t.index ["slug"], name: "index_users_on_slug", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
     t.index ["username"], name: "index_users_on_username"
+  end
+
+  create_table "waivers", force: :cascade do |t|
+    t.string "name"
+    t.date "dob"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "phone"
+    t.string "email"
+    t.string "emergency_contact_name"
+    t.string "emergency_contact_phone"
+    t.boolean "heart_condition"
+    t.boolean "chest_pain_doing_activity"
+    t.boolean "chest_pain_without_doing_activity"
+    t.boolean "lose_balance"
+    t.boolean "bone_problem"
+    t.boolean "prescription_drugs"
+    t.boolean "other_reason_not_to_do_activity"
+    t.string "signature"
+    t.date "sign_date"
+    t.string "legal_guardian_name"
+    t.string "legal_guardian_signature"
+    t.date "legal_guardian_sign_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
