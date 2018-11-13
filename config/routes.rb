@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 	resources :events
 	resources :workout
 	resources :dropins
-	resources :waivers
+	resources :waivers do
+		get :thank_you, on: :collection
+	end
+	resources :waiver_admin
 
 	devise_scope :user do
 		get 'users/sign_in' => 'sessions#new', as: 'sign_in'

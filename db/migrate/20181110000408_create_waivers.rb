@@ -1,6 +1,7 @@
 class CreateWaivers < ActiveRecord::Migration[5.2]
   def change
     create_table :waivers do |t|
+      t.references :user 
       t.string :name
       t.date :dob
       t.string :street
@@ -23,6 +24,7 @@ class CreateWaivers < ActiveRecord::Migration[5.2]
       t.string :legal_guardian_name
       t.string :legal_guardian_signature
       t.date :legal_guardian_sign_date
+      t.integer :status, default: 0
 
       t.timestamps
     end

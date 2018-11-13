@@ -403,6 +403,7 @@ ActiveRecord::Schema.define(version: 2018_11_10_000408) do
   end
 
   create_table "waivers", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "name"
     t.date "dob"
     t.string "street"
@@ -425,8 +426,10 @@ ActiveRecord::Schema.define(version: 2018_11_10_000408) do
     t.string "legal_guardian_name"
     t.string "legal_guardian_signature"
     t.date "legal_guardian_sign_date"
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_waivers_on_user_id"
   end
 
 end

@@ -1,15 +1,116 @@
-name /
-date of birth /
-address /
-city
-State
-Zip
-phone nr /
-email /
-how did you hear about us
-signature /
-date /
-emergency contact name /
-emergency contact phone number /
-legal guardian Name /
-legal guardian signature /
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Waiver</h2>
+
+      <%= form_for @waiver do |f| %>
+
+        <div class='form-group'>
+          <%= f.label :name, 'Name' %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :dob, 'Birth Date' %>
+          <%= f.text_field :dob, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :street, 'Street' %>
+          <%= f.text_field :street, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :city, 'City' %>
+          <%= f.text_field :city, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :state, 'State' %>
+          <%= f.text_field :state, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :zip, 'Zip Code' %>
+          <%= f.text_field :zip, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :phone, 'Phone Nr' %>
+          <%= f.text_field :phone, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :email, 'Email' %>
+          <%= f.text_field :email, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :emergency_contact_name, 'Emergency Contact Name' %>
+          <%= f.text_field :emergency_contact_name, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :emergency_contact_phone, 'Emergency Contact Phone Nr' %>
+          <%= f.text_field :emergency_contact_phone, class: 'form-control' %>
+        </div>
+
+
+        <div>Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor?
+        If YES, Explain:</div>
+
+        <div>Do you feel pain in your chest when you do physical activity?
+        If YES, Explain:</div>
+
+        <div>In the past month, have you had chest pain when you were not doing physical activity?
+        If YES, Explain:</div>
+
+        <div>Do you lose your balance because of dizziness or do you ever lose consiousness?
+        If YES, Explain:</div>
+
+        <div>Do you have a bone or joint problem (for example, neck, shoulder, back, knee or hip) that could be made worse
+        by a change in your physical activity?
+        If YES, Explain:</div>
+
+        <div>Is your doctor currently prescribing drugs (for example, water pills) for your blood pressure,
+        cholesterol or heart condition?
+        If YES, Explain:</div>
+
+        <div>Do you know of any other reason why you should not do physical activity?
+        If YES, Explain:</div>
+
+        <div class='form-group'>
+          <%= f.label :signature, 'Signature' %>
+          <%= f.text_field :signature, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :sign_date, 'Date' %>
+          <%= f.text_field :sign_date, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :legal_guardian_name, 'Legal Guardian Name' %>
+          <%= f.text_field :legal_guardian_name, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :legal_guardian_signature, 'Legal Guardian Signature' %>
+          <%= f.text_field :legal_guardian_signature, class: 'form-control' %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.label :legal_guardian_sign_date, 'Date' %>
+          <%= f.text_field :legal_guardian_sign_date, class: 'form-control' %>
+        </div>
+
+        <%= f.submit "Submit", class: 'btn btn-secondary' %>
+
+      <% end %>
+    </div>
+  </div>
+</div>
+
+t.integer "status", default: 0

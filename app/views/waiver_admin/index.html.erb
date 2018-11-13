@@ -1,0 +1,6 @@
+<table>
+  <% @waivers.each do |waiver| %>
+    <tr>
+      <td><%= link_to waiver.user, waiver_admin_path( waiver ) %></td>
+  <% end %>
+</table>

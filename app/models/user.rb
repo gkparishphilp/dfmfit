@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
 	has_one_attached :avatar_attachment
 
+	has_one :waiver
+
 	### VALIDATIONS	---------------------------------------------
 	validates_uniqueness_of		:username, case_sensitive: false, allow_blank: true, if: Proc.new{ |u| u.username_changed? && u.registered? }
 	validates_presence_of 		:email
@@ -29,7 +31,7 @@ class User < ApplicationRecord
 			where(conditions.to_h).first
 		end
 	end
-	
+
 	def self.term_search( term )
 		users = self
 		if term.present?
