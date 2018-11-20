@@ -58,6 +58,11 @@
 			%a{:href => '/privacy'} Privacy
 		-#%li
 			%a{:href => '/terms'} Terms
+
+		- if current_user.present?
+			%li
+				%a{:href => '/profiles' } My Profile
+				
 		- if current_user.present?
 			%li
 				%a{:href => main_app.logout_path() } Log out

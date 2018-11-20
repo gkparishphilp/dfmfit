@@ -42,7 +42,7 @@
 					%a{:href => "#contact-us"} Contact
 
 
--#= render 'devise/shared/flash_messages'
+
 
 
 
@@ -173,7 +173,7 @@
 							= f.text_field :name, id: 'form-name', :placeholder => "Your Name", required: true, class: 'input-md form-full'
 						.form-field-wrapper
 							= f.email_field :email, id: 'form-email', :placeholder => "Email", required: true, class: 'input-md form-full'
-						.form-field-wrapper
+						-#.form-field-wrapper
 							= f.text_field :title, id: 'form-subject', :placeholder => "Subject", class: 'input-md form-full'
 					.col-md-6.mb-0
 						.form-field-wrapper

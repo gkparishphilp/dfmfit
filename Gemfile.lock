@@ -98,6 +98,8 @@ GEM
       activerecord (>= 4.0.0, < 5.3)
     bcrypt (3.1.12)
     bindex (0.5.0)
+    bootstrap-sass-extras (0.0.7)
+      rails (>= 3.1.0)
     builder (3.2.3)
     byebug (10.0.2)
     capybara (2.18.0)
@@ -302,6 +304,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass-extras (~> 0.0.7)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2.2)
@@ -330,4 +333,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
