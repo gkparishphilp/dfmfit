@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_10_000408) do
+ActiveRecord::Schema.define(version: 2018_11_21_022854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -117,6 +117,15 @@ ActiveRecord::Schema.define(version: 2018_11_10_000408) do
     t.datetime "updated_at", null: false
     t.index ["identifier", "provider", "label"], name: "index_identifiers_on_identifier_and_provider_and_label", unique: true
     t.index ["parent_obj_type", "parent_obj_id"], name: "index_identifiers_on_parent_obj_type_and_parent_obj_id"
+  end
+
+  create_table "logs", force: :cascade do |t|
+    t.bigint "user_id"
+    t.date "workout_date"
+    t.text "workout"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_logs_on_user_id"
   end
 
   create_table "oauth_credentials", force: :cascade do |t|

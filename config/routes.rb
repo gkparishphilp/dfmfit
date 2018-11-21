@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
 	root to: 'root#index' # homepage
 
 	resources :admin
@@ -9,7 +10,8 @@ Rails.application.routes.draw do
 		get :thank_you, on: :collection
 	end
 	resources :waiver_admin
-	resources :profiles 
+	resources :logs
+
 
 	devise_scope :user do
 		get 'users/sign_in' => 'sessions#new', as: 'sign_in'

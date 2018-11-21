@@ -12,6 +12,7 @@ class User < ApplicationRecord
 	has_one_attached :avatar_attachment
 
 	has_one :waiver
+	has_many :logs 
 
 	### VALIDATIONS	---------------------------------------------
 	validates_uniqueness_of		:username, case_sensitive: false, allow_blank: true, if: Proc.new{ |u| u.username_changed? && u.registered? }

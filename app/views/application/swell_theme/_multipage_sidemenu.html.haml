@@ -61,8 +61,8 @@
 
 		- if current_user.present?
 			%li
-				%a{:href => '/profiles' } My Profile
-				
+				%a{:href => logs_path } My Profile
+
 		- if current_user.present?
 			%li
 				%a{:href => main_app.logout_path() } Log out
