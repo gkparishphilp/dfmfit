@@ -1,6 +1,6 @@
 class LogsController < ApplicationController
   before_action :set_log, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+
 
   # GET /logs
   # GET /logs.json
@@ -15,7 +15,7 @@ class LogsController < ApplicationController
 
   # GET /logs/new
   def new
-    @log = current_user.logs.build
+    @log = Log.new
   end
 
   # GET /logs/1/edit
@@ -25,10 +25,9 @@ class LogsController < ApplicationController
   # POST /logs
   # POST /logs.json
   def create
-    @log = current_user.logs.build(log_params)
-    
+    @log = Log.new(log_params)
 
-    @log.user = @user
+    @log.user = current_user
 
     respond_to do |format|
       if @log.save
