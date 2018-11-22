@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 	end
 	resources :waiver_admin
 	resources :logs
+	resources :contacts 
 
 
 	devise_scope :user do
