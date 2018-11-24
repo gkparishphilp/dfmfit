@@ -17,7 +17,7 @@
 					Facebook
 				%input.btn.btn-md.btn-color-b.form-full{:type => "submit", :value => "Sign In"}/
 			%a{ href: main_app.new_user_registration_path() } New Member?
-			%a.pull-right{ href: "/forgot" } Forgot Password?
+			%a.pull-right{:href => new_password_path(resource_name) } Forgot Password?
 	%ul
 		%li
 			%a{:href => '/' } Home
