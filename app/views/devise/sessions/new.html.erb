@@ -34,6 +34,7 @@
         <%= f.submit "Sign In", class: 'btn btn-secondary' %>
 
         <p style="font-weight: bold">New User? <%=link_to 'Sign Up Now', new_user_registration_path, class: 'btn btn-link' %></p>
+        <%= link_to "Back", :back, class: 'btn btn-link' %>
 
       <% end %>
     </div>

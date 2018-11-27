@@ -9,6 +9,7 @@ class RootController < ApplicationController
 	def index
 		@articles = Pulitzer::Article.published.order( created_at: :desc ).limit( 15 )
 		render layout: 'homepage'
+		@contact = Contact.new
 	end
 
 	# this handles all media in the pulitzer_media table
@@ -22,6 +23,7 @@ class RootController < ApplicationController
 		# via media.layout and media.template
 		pulitzer_render( @media )
 	end
+
 
 
 

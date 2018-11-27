@@ -39,6 +39,7 @@
           <%= f.submit yield(:button_text), class: 'btn btn-secondary' %>
 
           <p style="font-weight: bold">Existing User? <%=link_to 'Sign In Now', user_session_path, class: 'btn btn-link' %></p>
+          <%= link_to "Back", :back, class: 'btn btn-link' %>
       <% end %>
 
     </div>
