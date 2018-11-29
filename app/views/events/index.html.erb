@@ -2,18 +2,14 @@
 <table class="table table-bordered">
 
   <thead class="thead-dark">
-    <% @events.each do |event| %>
+
     <tr>
       <th scope="col">Time/Day</th>
+      <% @events.each do |event| %>
       <th scope="col"><%= event.day_of_week %></th>
-      <th scope="col"><%= event.day_of_week %></th>
-      <th scope="col"><%= event.day_of_week %></th>
-      <th scope="col"><%= event.day_of_week %></th>
-      <th scope="col"><%= event.day_of_week %></th>
-      <th scope="col"><%= event.day_of_week %></th>
-      <th scope="col"><%= event.day_of_week %></th>
+      <% end %>
     </tr>
-    <% end %>
+
   </thead>
 
   <tbody>
@@ -21,133 +17,8 @@
     <tr>
       <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
       <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
     </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-      <td><%= event.name %></td>
-    </tr>
+
   <% end %>
   </tbody>
 </table>
