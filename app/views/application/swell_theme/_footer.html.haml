@@ -1,11 +1,42 @@
-%navbar.fixed-bottom.navbar-light
-  .container
-    %p
-      \© #{Time.current.year}
-      = succeed "." do
-        %a{ href: '/' }
-          %b #{Pulitzer.app_name}
-      %br/
-      Lovingly crafted by
-      %a{:href => "http://www.groundswellenterprises.com/", :target => "_blank"}
-        %b Groundswell Enterprises
+/ FOOTER
+%footer.footer.pt-80
+	.container
+		/ Footer Info
+		.row
+			.col-sm-6
+				= form_for :contact, :url => {:controller => 'contacts', :action => 'create'} do |f|
+					.form-field-wrapper
+						= f.text_field :name, id: 'form-name', :placeholder => "Your Name", required: true, class: 'input-md form-full'
+					.form-field-wrapper
+						= f.email_field :email, id: 'form-email', :placeholder => "Email", required: true, class: 'input-md form-full'
+			.col-sm-6
+				= form_for :contact, :url => {:controller => 'contacts', :action => 'create'} do |f|
+					.form-field-wrapper
+						= f.text_area :message, id: 'form-message', :placeholder => "Your Message", :required => true, rows: 7, class: 'input-md form-full'
+		.row
+			.col-sm-12.text-center
+				%button#form-submit.btn-contact-submit.btn.btn-md.btn-color{:name => "submit", :type => "submit"} Submit
+				/ End Footer Info
+			%hr/
+			/ Copyright Bar
+		.row.pt-60
+			.col-sm-12.text-center
+				%p
+					\© #{Time.current.year}
+					= succeed "." do
+						%a{ href: '/' }
+							%b #{Pulitzer.app_name}
+						%a{:href => "https://instagram.com/2120_del_mar"}
+							%i.fab.fa-instagram
+						%a{:href => "https://www.facebook.com/", :target => "_blank"}
+							%i.fab.fa-facebook
+					%br/
+					Lovingly crafted by
+					%a{:href => "http://www.groundswellenterprises.com/", :target => "_blank"}
+						%b Groundswell Enterprises
+			/ End Copyright Bar
+		/ END FOOTER
+		/ Scroll Top
+		%a.scroll-top
+			%i.fa.fa-angle-double-up
+		/ End Scroll Top

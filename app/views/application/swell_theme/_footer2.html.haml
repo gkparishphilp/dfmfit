@@ -1,0 +1,11 @@
+%navbar.fixed-bottom.navbar-light
+  .container
+    %p
+      \© #{Time.current.year}
+      = succeed "." do
+        %a{ href: '/' }
+          %b #{Pulitzer.app_name}
+      %br/
+      Lovingly crafted by
+      %a{:href => "http://www.groundswellenterprises.com/", :target => "_blank"}
+        %b Groundswell Enterprises
