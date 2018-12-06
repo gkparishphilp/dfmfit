@@ -1,10 +1,10 @@
 <% provide(:button_text, 'Update') %>
 
-<div class="container">
+<div class="container pb-100">
   <div class="row">
     <div class="col-sm-4 offset-sm-4">
 
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <h2 style="text-align:center;font-family:'Raleway',sans-serif;">Edit your profile </h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -31,7 +31,7 @@
 
 
   <div class="form-group">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password %> <i>(enter current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, required: true, autocomplete: "current-password", class: 'form-control' %>
   </div>
 
@@ -55,7 +55,7 @@
   </div>
 <% end %>
 
-<p style="font-weight: bold">Unhappy? <%=link_to 'Cansel my account', registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-link' %></p>
+<p><%=link_to 'Delete my online prifile', registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-outline-light' %></p>
 
 <%= link_to "Back", :back, class: 'badge badge-light' %>
 
