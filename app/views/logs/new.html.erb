@@ -1,5 +1,9 @@
-<h1>New Log</h1>
-
-<%= render 'form', log: @log %>
-
-<%= link_to 'Back', logs_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4">
+      <h2 style="text-align:center;font-family:'Raleway',sans-serif;">New Log</h2>
+        <%= render 'form', log: @log %>
+        <%= link_to 'Back', logs_path, class: 'badge badge-light' %>
+    </div>
+  </div>
+</div>

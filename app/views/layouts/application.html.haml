@@ -37,7 +37,7 @@
 	%body
 		= render 'gtm_body'
 		= render 'devise/shared/flash_messages'
-  	
+
 
 
 		= hidden_field_tag :map_marker, image_path("app_theme/theme/onepage/img/map-marker.png")
@@ -49,7 +49,8 @@
 			-#= render 'application/flash', args: {}
 			%section{ style: 'height: 100px;' }
 			= yield
-			= render 'application/swell_theme/multipage_footer'
+			-#= render 'application/swell_theme/multipage_footer'
+			= render 'application/swell_theme/footer'
 
 
 

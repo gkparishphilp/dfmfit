@@ -5,8 +5,8 @@
 
     <tr>
       <th scope="col">Time/Day</th>
-      <% @events.each do |event| %>
-      <th scope="col"><%= event.day_of_week %></th>
+      <% @events.pluck('distinct day_of_week').each do |day_of_week| %>
+      <th scope="col"><%= day_of_week %></th>
       <% end %>
     </tr>
 

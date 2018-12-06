@@ -73,6 +73,10 @@
 				%li
 					%a{:href => pulitzer.articles_path() }
 						Workouts
+				-if current_user.present?
+					%li
+						%a{:href => edit_user_registration_path }
+							Edit My Profile
 
 				-#%li
 					%a{:href => pulitzer.pages_path() }

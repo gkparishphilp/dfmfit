@@ -1,3 +1,4 @@
+
 <%= form_with(model: log, local: true) do |form| %>
   <% if log.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +12,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :workout_date %>
-    <%= form.text_field :workout_date %>
+
+  <div class='form-group'>
+    <%= form.label :workout_date, 'Workout date' %>
+    <%= form.text_field :workout_date, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :workout %>
-    <%= form.text_area :workout %>
+
+
+  <div class='form-group'>
+    <%= form.label :workout, 'Workout' %>
+    <%= form.text_area :workout, class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<%= form.submit "Log your workout", class: 'btn btn-secondary' %>
 <% end %>

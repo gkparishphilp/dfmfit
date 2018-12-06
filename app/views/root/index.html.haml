@@ -1,5 +1,4 @@
 
-
 %header#header.header
 	.container
 		.logo
@@ -26,10 +25,13 @@
 
 		.nav-menu.singlepage-nav
 			%ul.nav-menu-inner
+
 				%li
-					%a.link.ion.ion-social-instagram{:href => "https://www.instagram.com/", :target => "_blank"}
+					%a{:href => "https://instagram.com/", :target => "_blank"}
+						%i.fab.fa-instagram
 				%li
-					%a.link.ion-social-facebook{:href => "https://www.facebook.com/", :target => "_blank"}
+					%a{:href => "https://www.facebook.com/", :target => "_blank"}
+						%i.fab.fa-facebook
 				%li
 					%a{:href => "#intro"} Home
 				%li
@@ -49,7 +51,7 @@
 / Intro
 %section#intro.intro
 	/ Static Intro
-	.bg-image.overlay-dark.dark-bg.bg-fixed{"data-background-img" => 'http://crossfit2120.com/wp-content/uploads/2016/04/image-21.jpeg'}
+	.bg-image.overlay-dark.dark-bg.bg-fixed{"data-background-img" => 'https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/lion-male-roar.adapt.945.1.jpg'}
 		.js-fullscreen-height.container
 			.intro-content
 				.intro-content-inner

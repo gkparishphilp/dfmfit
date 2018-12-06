@@ -552,7 +552,7 @@ button, input, textarea, select {
 
     input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"], input[type="radio"], input[type="checkbox"], textarea, select {
         appearance: none;
-        -webkit-appearance: none;
+        /*-webkit-appearance: none;*/
         border: 1px solid #ddd;
         -webkit-border-radius: 0px;
         border-radius: 0px;
@@ -596,7 +596,7 @@ label {
     margin-top: 6px;
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
-    display:block;
+    /*display:block;*/
 }
     label.inline {
         display:inline-block !important;
