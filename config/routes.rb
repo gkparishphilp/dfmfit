@@ -11,7 +11,12 @@ Rails.application.routes.draw do
 	end
 	resources :waiver_admin
 	resources :logs
-	resources :contacts 
+	resources :contacts
+
+	get 'pages/about'
+	get 'pages/staff'
+	get 'pages/membership'
+	get 'pages/training'
 
 
 	devise_scope :user do

@@ -15,7 +15,8 @@
 						= f.text_area :message, id: 'form-message', :placeholder => "Your Message", :required => true, rows: 7, class: 'input-md form-full'
 		.row
 			.col-sm-12.text-center
-				%button#form-submit.btn-contact-submit.btn.btn-md.btn-color{:name => "submit", :type => "submit"} Submit
+				= form_for :contact, :url => {:controller => 'contacts', :action => 'create'} do |f|
+					%button#form-submit.btn-contact-submit.btn.btn-md.btn-color{:name => "submit", :type => "submit"} Submit
 				/ End Footer Info
 			%hr/
 			/ Copyright Bar

@@ -1,47 +1,48 @@
 
-%header#header.header
-	.container
-		.logo
-			%a{:href => '/'}
-				%img.logo-light{:alt => Pulitzer.app_name, :src => image_path("logo-white.png")}/
-				%img.logo-dark{:alt => Pulitzer.app_name, :src => image_path("logo-black.png")}/
+-#
+	%header#header.header
+		.container
+			.logo
+				%a{:href => '/'}
+					%img.logo-light{:alt => Pulitzer.app_name, :src => image_path("logo-white.png")}/
+					%img.logo-dark{:alt => Pulitzer.app_name, :src => image_path("logo-black.png")}/
 
 
 
-		/ Rightside menu
-		.side-menu-btn
-			%ul
-				/ Sidebar Menu Icon
-				%li
-					%a#menu-sidebar-list-icon.nav-bar-icon
-						%span
-				/ End Sidebar Menu Icon
-		/ End Rightside Menu
+			/ Rightside menu
+			.side-menu-btn
+				%ul
+					/ Sidebar Menu Icon
+					%li
+						%a#menu-sidebar-list-icon.nav-bar-icon
+							%span
+					/ End Sidebar Menu Icon
+			/ End Rightside Menu
 
 
-		/ Navbar Navigation
+			/ Navbar Navigation
 
-		.ul.aria.label
+			.ul.aria.label
 
-		.nav-menu.singlepage-nav
-			%ul.nav-menu-inner
+			.nav-menu.singlepage-nav
+				%ul.nav-menu-inner
 
-				%li
-					%a{:href => "https://instagram.com/", :target => "_blank"}
-						%i.fab.fa-instagram
-				%li
-					%a{:href => "https://www.facebook.com/", :target => "_blank"}
-						%i.fab.fa-facebook
-				%li
-					%a{:href => "#intro"} Home
-				%li
-					%a{:href => "#about"} About
-				%li
-					%a{:href => "#workouts"} Services
-				%li
-					%a{:href => "#staff"} Staff
-				%li
-					%a{:href => "#contact-us"} Contact
+					%li
+						%a{:href => "https://instagram.com/", :target => "_blank"}
+							%i.fab.fa-instagram
+					%li
+						%a{:href => "https://www.facebook.com/", :target => "_blank"}
+							%i.fab.fa-facebook
+					%li
+						%a{:href => "#intro"} Home
+					%li
+						%a{:href => "#about"} About
+					%li
+						%a{:href => "#workouts"} Services
+					%li
+						%a{:href => "#staff"} Staff
+					%li
+						%a{:href => "#contact-us"} Contact
 
 
 
@@ -91,31 +92,47 @@
 
 / End About Section
 
+/ About Section
+%section#about.wow.fadeIn.ptb.ptb-sm-80.animated
+	.container.mb-60
+		.row.text-center
+			.col-md-6.wow.slideInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
+				%img{:alt => "mockup", :src => 'http://crossfit2120.com/wp-content/uploads/2013/12/Dan_whiteboard.jpg', :style => "max-width: 457px; width: 100%;"}/
+			.col-md-6.wow.fadeIn{"data-wow-delay" => "0.4s", "data-wow-duration" => "2s"}
+				.spacer-15
+				%h6.page-title-alt.color.mb-10 #{Pulitzer.app_name}
+				%h2.page-title.mb-25
+					Why crossfit 2120
+				%p.mb-35
+					Safety. Accountability. Fun. That’s what CrossFit 2120 stands for. I started this gym to share a vision of training and to bring out the best in people. CrossFit can be intimidating for new people. So, we have an optional on-ramp program that teaches safety and functional movements. An injured athlete isn’t coming back for more, we focus on mechanics before intensity. We believe in accountability. Accountability in movements guarantees safety. Accountability to programming guarantees results. At the end of each hour, a sense of team and accomplishment brings our members together. This camaraderie is the extra benefit from becoming a part of our 2120 family. After you’re done, you look better, you feel better, you ARE better. Come down to CrossFit 2120 and explore the possibilities. Coach Dan Miller.
+
+
+/ End About Section
+
 
 / About Section 2
--#
-	%section#about2.wow.fadeIn.ptb.ptb-sm-80.animated.text-center.gray-bg
-		.container
-			.row
-				.col-md-4.col-sm-6.content-box.mb-sm-30.wow.fadeIn{"data-wow-delay" => "0.2s", "data-wow-duration" => "2s"}
-					.icon-top.icon-black
-						%i.icon.icon-basic-anchor
-					%h5.features-title We’re Creative
-					%p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
-				.col-md-4.col-sm-6.content-box.mb-sm-30.wow.fadeIn{"data-wow-delay" => "0.4s", "data-wow-duration" => "2s"}
-					.icon-top.icon-black
-						%i.icon.icon-basic-alarm
-					%h5.features-title TWe have magic
-					%p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
-				.col-md-4.col-sm-6.content-box.mb-sm-30.wow.fadeIn{"data-wow-delay" => "0.6s", "data-wow-duration" => "2s"}
-					.icon-top.icon-black
-						%i.icon.icon-basic-globe
-					%h5.features-title Why we do it
-					%p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
+-#%section#about2.wow.fadeIn.ptb.ptb-sm-80.animated.text-center.gray-bg
+	.container
+		.row
+			.col-md-4.col-sm-6.content-box.mb-sm-30.wow.fadeIn{"data-wow-delay" => "0.2s", "data-wow-duration" => "2s"}
+				.icon-top.icon-black
+					%i.icon.icon-basic-anchor
+				%h5.features-title We’re Creative
+				%p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
+			.col-md-4.col-sm-6.content-box.mb-sm-30.wow.fadeIn{"data-wow-delay" => "0.4s", "data-wow-duration" => "2s"}
+				.icon-top.icon-black
+					%i.icon.icon-basic-alarm
+				%h5.features-title TWe have magic
+				%p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
+			.col-md-4.col-sm-6.content-box.mb-sm-30.wow.fadeIn{"data-wow-delay" => "0.6s", "data-wow-duration" => "2s"}
+				.icon-top.icon-black
+					%i.icon.icon-basic-globe
+				%h5.features-title Why we do it
+				%p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
 / End About Section 2
 
 / Services Section
-%section#workouts.wow.fadeIn.ptb.ptb-sm-80.animated
+-#%section#workouts.wow.fadeIn.ptb.ptb-sm-80.animated
 	.container
 		%h3.float-left.float-none-xs Services you offer: crossfit, personal training, kokoro , kids
 		-#%a.btn-link-a.float-right.float-none-xs{ href: pulitzer.articles_path() } View All
@@ -131,7 +148,7 @@
 / End Services Section
 
 / Staff Section
-%section#staff.wow.fadeIn.ptb.ptb-sm-80.animated
+-#%section#staff.wow.fadeIn.ptb.ptb-sm-80.animated
 	.container
 		%h3.float-left.float-none-xs STAFF
 		-#%a.btn-link-a.float-right.float-none-xs{ href: pulitzer.articles_path() } View All
@@ -145,10 +162,6 @@
 						%hr
 					= render 'pulitzer/articles/blog_post', media: article, args: { mode: :thumb }
 / End of staff section
-
-
-
-
 
 / Contact Form
 -#%section#contact-us.wow.fadeIn.ptb.ptb-sm-80.animated.dark-bg.overlay-dark.bg-image.overlay-dark60{"data-background-img" => 'http://crossfit2120.com/wp-content/uploads/2018/09/GDMF-2018.jpg', "data-stellar-background-ratio" => "0.5"}

@@ -8,7 +8,7 @@ class RootController < ApplicationController
 	# this is the homepage!
 	def index
 		@articles = Pulitzer::Article.published.order( created_at: :desc ).limit( 15 )
-		render layout: 'homepage'
+		render layout: 'application'
 		@contact = Contact.new
 	end
 
