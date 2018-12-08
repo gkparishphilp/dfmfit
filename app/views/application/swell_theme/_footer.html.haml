@@ -1,8 +1,9 @@
 / FOOTER
 %footer.footer.pt-80
 	.container
+		= render 'root/mailer'
 		/ Footer Info
-		.row
+		-#.row
 			.col-sm-6
 				= form_for :contact, :url => {:controller => 'contacts', :action => 'create'} do |f|
 					.form-field-wrapper
@@ -13,11 +14,7 @@
 				= form_for :contact, :url => {:controller => 'contacts', :action => 'create'} do |f|
 					.form-field-wrapper
 						= f.text_area :message, id: 'form-message', :placeholder => "Your Message", :required => true, rows: 7, class: 'input-md form-full'
-		.row
-			.col-sm-12.text-center
-				= form_for :contact, :url => {:controller => 'contacts', :action => 'create'} do |f|
-					%button#form-submit.btn-contact-submit.btn.btn-md.btn-color{:name => "submit", :type => "submit"} Submit
-				/ End Footer Info
+
 			%hr/
 			/ Copyright Bar
 		.row.pt-60
