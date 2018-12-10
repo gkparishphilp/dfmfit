@@ -1,0 +1,29 @@
+
+<table class="table table-bordered">
+
+  <thead class="thead-dark">
+
+    <tr>
+      <th scope="col">Time/Day</th>
+      <% @events.pluck('distinct day_of_week').each do |day_of_week| %>
+      <th scope="col"><%= day_of_week %></th>
+      <% end %>
+    </tr>
+
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+    <tr>
+      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
+      <td><%= event.name %></td>
+    </tr>
+
+  <% end %>
+  </tbody>
+</table>
+
+@@ -0,0 +1,153 @@
+<% @events.each do |event| %>
+<%= event.name %>
+<% end %>

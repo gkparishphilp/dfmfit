@@ -1,24 +1,154 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table">
 
-<table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Time/Day</th>
+          <th scope="col">Monday</th>
+          <th scope="col">Tuesday</th>
+          <th scope="col">Wednesday</th>
+          <th scope="col">Thursday</th>
+          <th scope="col">Friday</th>
+          <th scope="col">Saturday</th>
+          <th scope="col">Sunday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">5.15am-6am</th>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">6am-7am</th>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">7am-8am</th>
+          <td class="table-success">55+</td>
+          <td></td>
+          <td class="table-success">55+</td>
+          <td></td>
+          <td class="table-success">55+</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">8am-9am</th>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-warning">Open Gym</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">9am-10am</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="table-primary">Crossfit</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">10am-11am</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="table-warning">Open Gym</td>
+          <td class="table-warning">Open Gym</td>
+        </tr>
+        <tr>
+          <th scope="row">11am-12pm</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="table-warning">Open Gym</td>
+        </tr>
+        <tr>
+          <th scope="row">12pm-1pm</th>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">1pm-2pm</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">2pm-3pm</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">3pm-4pm</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">4pm-5pm</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">5pm-6pm</th>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td class="table-primary">Crossfit</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
 
-  <thead class="thead-dark">
-
-    <tr>
-      <th scope="col">Time/Day</th>
-      <% @events.pluck('distinct day_of_week').each do |day_of_week| %>
-      <th scope="col"><%= day_of_week %></th>
-      <% end %>
-    </tr>
-
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-    <tr>
-      <th scope="row"><%= event.start_at %>-<%= event.end_at %></th>
-      <td><%= event.name %></td>
-    </tr>
-
-  <% end %>
-  </tbody>
-</table>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
