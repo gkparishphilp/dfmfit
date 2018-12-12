@@ -1,3 +1,0 @@
-class Dropin < ApplicationRecord
-
-end

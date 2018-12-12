@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 	resources :admin
 	resources :events
 	resources :workout
-	resources :dropins
 	resources :waivers do
 		get :thank_you, on: :collection
 	end
@@ -17,6 +16,7 @@ Rails.application.routes.draw do
 	get 'pages/staff'
 	get 'pages/membership'
 	get 'pages/training'
+	get 'pages/dropins'
 
 
 	devise_scope :user do

@@ -9,5 +9,8 @@ class PagesController < ApplicationController
   end
 
   def training
+  end
+
+  def dropins
   end 
 end

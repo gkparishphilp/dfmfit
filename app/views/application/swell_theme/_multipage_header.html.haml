@@ -9,7 +9,7 @@
 				%img.logo-dark{:alt => "#{Pulitzer.app_name}", :src => image_path("logo-black.png")}/
 		/ End Logo
 		/ Rightside Menu (Search, Cart, Bart icon)
-		.side-menu-btn
+		-#.side-menu-btn
 			%ul
 				/ Search Icon
 				-# %li
@@ -85,11 +85,28 @@
 					%a{:href => '/pages/training'} Personal training
 				%li
 					%a{:href => '/contacts'} Contact us
+				%li
+					%a{:href => 'pages/dropins'} Drop-ins welcome
+				%li
+					%a{:href => '/workouts'} Today's Workout
+				%li
+					%a{:href => new_user_registration_path }
+						Sign up
+				%li
+					%a{:href => user_session_path }
+						Sign in
 
 				-if current_user.present?
 					%li
 						%a{:href => edit_user_registration_path }
 							Edit My Profile
+				-if current_user.present?
+					%li
+						%a{:href => main_app.logout_path() }
+							Log out
+				-if current_user.present? && current_user.admin?
+					%li
+						%a{:href => '/admin'} Admin
 
 				-#%li
 					%a{:href => pulitzer.pages_path() }
