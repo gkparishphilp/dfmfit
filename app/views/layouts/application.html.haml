@@ -49,8 +49,9 @@
 			= render 'layouts/navbar'
 			-#= render 'application/swell_theme/multipage_header', args: { class: 'header-light' }
 			-#= render 'application/flash', args: {}
-			%section{ style: 'height: 100px;' }
-			= yield
+			-#%section{ style: 'height: 100px;' }
+			.main-content
+				= yield
 			-#= render 'application/swell_theme/multipage_footer'
 			= render 'layouts/footer'
 
