@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 offset sm-12">
-      <h2>Physical Activity Questionnaire/Waiver</h2>
+      <h2 style="text-align:center;">Physical Activity Questionnaire/Waiver</h2>
 
       <%= form_for @waiver do |f| %>
 <div class="form-row">
@@ -58,52 +58,55 @@
           <%= f.label :emergency_contact_phone, 'Emergency Contact Phone Nr' %>
           <%= f.text_field :emergency_contact_phone, class: 'form-control' %>
         </div>
+</div>
 <div>
-
         <h4 style="text-align:center;">Physical Activity Readiness Questionnaire</h4>
 
-
           <%= f.check_box :heart_condition %>
-          Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor?
+          Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor?<br>
 
+          <%= f.check_box :chest_pain_doing_activity %>
+          Do you feel pain in your chest when you do physical activity?<br>
 
-        <div>Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor?
-        If YES, Explain:</div>
+        <%= f.check_box :chest_pain_without_doing_activity %>
+        In the past month, have you had chest pain when you were not doing physical activity?<br>
 
-        <div>Do you feel pain in your chest when you do physical activity?
-        If YES, Explain:</div>
+        <%= f.check_box :lose_balance %>
+        Do you lose your balance because of dizziness or do you ever lose consiousness?<br>
 
-        <div>In the past month, have you had chest pain when you were not doing physical activity?
-        If YES, Explain:</div>
+        <%= f.check_box :bone_problem %>
+        Do you have a bone or joint problem (for example, neck, shoulder, back, knee or hip) that could be made worse
+        by a change in your physical activity?<br>
 
-        <div>Do you lose your balance because of dizziness or do you ever lose consiousness?
-        If YES, Explain:</div>
+        <%= f.check_box :prescription_drugs %>
+        Is your doctor currently prescribing drugs (for example, water pills) for your blood pressure,
+        cholesterol or heart condition?<br>
 
-        <div>Do you have a bone or joint problem (for example, neck, shoulder, back, knee or hip) that could be made worse
-        by a change in your physical activity?
-        If YES, Explain:</div>
+        <%= f.check_box :other_reason_not_to_do_activity %>
+        Do you know of any other reason why you should not do physical activity?<br>
+</div>
+<div>
 
-        <div>Is your doctor currently prescribing drugs (for example, water pills) for your blood pressure,
-        cholesterol or heart condition?
-        If YES, Explain:</div>
-
-        <div>Do you know of any other reason why you should not do physical activity?
-        If YES, Explain:</div>
-
-        <h4>Informed Consent / Assumption of Risk:</h4>
-        <h5>I am aware that there are significant risks involved in all aspects of physical training. I understand that the reaction of the heart, lungs and vascular system to exercise cannot always be predicted with accuracy. I understand that there is a risk of certain abnormal changes occurring during of following exercise which may include abnormalities of blood pressure or heart rate; chest, arm or leg discomfort; transient light-headedness or fainting; and in rare instances, heart attack, stroke or even death. Excessive work can result (in rare cases) in exertional rhabdomyolysis. I should look for signs or excessive soreness, darkened urine, and pain in the kidney areas in the days following a particularly intense workout. While this type of injury is relatively rare, it can occur due to a number of factors, including (but not limited to) genetic predisposition or dehydration, that may be beyond the control of my trainer. I understand that the programs and classes offered by Crossfit2120 are of a nature and kind that are extremely strenuous and can/may push me to the limits of my physical abilities. These risks include, but are not limited to: falls which can result in serious injury or death, injury or death due to negligence on the part of myself, my training partner, or other people around me, injury or death due to improper use or failure of equipment. I am aware that any of these above-mentioned risks may result in serious injury or death to myself and or my partner(s).<br>
+        <h4 style="text-align:center;">Informed Consent/Assumption of Risk:</h4>
+        I am aware that there are significant risks involved in all aspects of physical training. I understand that the reaction of the heart, lungs and vascular system to exercise cannot always be predicted with accuracy. I understand that there is a risk of certain abnormal changes occurring during of following exercise which may include abnormalities of blood pressure or heart rate; chest, arm or leg discomfort; transient light-headedness or fainting; and in rare instances, heart attack, stroke or even death. Excessive work can result (in rare cases) in exertional rhabdomyolysis. I should look for signs or excessive soreness, darkened urine, and pain in the kidney areas in the days following a particularly intense workout. While this type of injury is relatively rare, it can occur due to a number of factors, including (but not limited to) genetic predisposition or dehydration, that may be beyond the control of my trainer. I understand that the programs and classes offered by Crossfit2120 are of a nature and kind that are extremely strenuous and can/may push me to the limits of my physical abilities. These risks include, but are not limited to: falls which can result in serious injury or death, injury or death due to negligence on the part of myself, my training partner, or other people around me, injury or death due to improper use or failure of equipment. I am aware that any of these above-mentioned risks may result in serious injury or death to myself and or my partner(s).<br>
+        <br>
         I willingly assume full responsibility for any and all risks that I am exposing myself to as a result of my participation in Crossfit2120 programs/classes and accept full responsibility for any injury or death that may result from participation in any activity, class or physical fitness program. I hereby certify that I know of no medical problems that would increase my risk of illness and injury as a result of participation in a fitness program designed by Crossfit2120. With my full understanding of the above information, I agree to assume any and all risk associated with my participation in Crossfit2120 programs/classes.<br>
+        <br>
         I acknowledge that I have voluntarily chosen to participate in a program of progressive, physical exercise. By signing this document, I acknowledge being informed of the strenuous nature of the program and the potential for unusual, but possible, physiological results including, but not limited to, abnormal blood pressure, rhabdomyolysis, fainting, heart attack, or death. By signing this document, I assume all risk for my health and well-being and hold Crossfit2120, as well as its owners, employees, and other authorized agents including independent contractors, harmless there from. I understand that questions about exercise procedure and recommendations are encouraged and welcome.<br>
+        <br>
         Waiver and Release:<br>
         I fully understand that my personal exercise program may be strenuous and I choose to participate voluntarily. I accept all responsibility for my health and any results, injury or mishaps that may affect my well-being or health in any way. I waive any claims, demands, causes of action or any claims for relief whatsoever against, and release Crossfit2120 (as well as any of its owners, employees, or other authorized agents, including independent contractors) from any and all liability, claims and/or causes of action that I may have for injuries or other damages, arising out of participation in Crossfit2120 activities, including, but not limited to the personal training/nutritional programs and programs/classes.<br>
+        <br>
         Photo/Video Release:<br>
         I hereby grant Crossfit2120 permission to use my photograph/video image in any and all publications for promotion on social media sites, Crossfit or Crossfit2120, including web site entries, without payment or any other consideration in perpetuity. I hereby authorize Crossfit2120 to edit, alter, copy, exhibit, publish or distribute all photos and images. I waive the right to inspect or approve the finished product, including written or electronic copy, wherein my photo appears. Additionally, I waive any right to royalties or other compensation arising or related to the use of the photograph or video images. I hereby hold harmless and release and forever discharge Crossfit2120 from all claims, demands, and causes of action which I, my heirs, representatives, executors, administrators, or any other persons acting on my behalf or on behalf of my estate which may have or may have by reason of this authorization. <br>
+        <br>
         Indemnification:<br>
         I recognize that there is risk involved in the types of activities offered by Crossfit2120. Therefore, I accept financial responsibility for any injury that I may cause either to myself or to any other participant due to his/her negligence. Should the above-mentioned parties, or anyone acting on their behalf, be required to incur attorneys’ fees and costs to enforce this agreement, I agree to reimburse them for such fees and costs. I further agree to indemnify and hold harmless Crossfit2120, their principals, agents, employees, and volunteers from liability for the injury or death of any person(s) and damage to property that may result from my negligent or intentional act or omission while participating in activities offered by Crossfit2120.<br>
         <br>
         I have fully read and fully understand the foregoing assumption of risk, and release of liability and I understand that by signing it obligates me to indemnify the parties named for any liability for injury or death of any person and damage to property caused by my negligent or intentional act or omission. I understand that by signing this form I am waiving valuable legal rights.<br>
-        I have carefully read this Agreement and fully understand its contents. I am aware that this is a release and waiver of liability and sign it knowingly, voluntarily, and of my own free will.</h5><br>
-
+        I have carefully read this Agreement and fully understand its contents. I am aware that this is a release and waiver of liability and sign it knowingly, voluntarily, and of my own free will.<br>
+</div>
+<br>
 <div class="form-row">
                 <div class='form-group col-sm-6'>
                   <%= f.label :signature, 'Signature' %>
@@ -114,7 +117,7 @@
                   <%= f.label :sign_date, 'Date' %>
                   <%= f.text_field :sign_date, class: 'form-control' %>
                 </div>
-<div>
+</div>
 
 <div class="form-row">
         <div class='form-group col-sm-4'>

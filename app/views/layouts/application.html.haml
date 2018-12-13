@@ -7,7 +7,7 @@
 //[if gt IE 8] <html class="no-js">
 %html{ lang: :en, class: ( current_user.present? ? 'has_current_user' : '' ) }
 	%head
-		= render 'application/gtm_head'
+		-#= render 'application/gtm_head'
 
 		%title
 			= @page_meta[:title]
@@ -18,7 +18,7 @@
 		%meta{ content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport" }
 
 
-		= render 'application/social_meta', args: {}
+		-#= render 'application/social_meta', args: {}
 
 		= stylesheet_link_tag 'application'
 		%link{ rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.0.10/css/all.css", integrity: "sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg", crossorigin: "anonymous" }
