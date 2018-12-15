@@ -47,13 +47,17 @@
 		-#= render 'application/swell_theme/multipage_sidemenu'
 		.wrapper
 			= render 'layouts/navbar'
+
 			-#= render 'application/swell_theme/multipage_header', args: { class: 'header-light' }
-			-#= render 'application/flash', args: {}
+			-#= render 'devise/shared/flash_messages',
 			-#%section{ style: 'height: 100px;' }
 			.main-content
+				= render 'devise/shared/flash_messages'
+
 				= yield
 			-#= render 'application/swell_theme/multipage_footer'
 			= render 'layouts/footer'
+			
 
 
 

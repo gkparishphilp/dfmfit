@@ -12,7 +12,7 @@ class WaiversController < ApplicationController
     @waiver.user = @user
 
     if @waiver.save
-      flash[:primary] = "Your waiver was successfully signed."
+      flash[:success] = "Your waiver was successfully signed."
       redirect_to thank_you_waivers_path
     else
       render 'new'

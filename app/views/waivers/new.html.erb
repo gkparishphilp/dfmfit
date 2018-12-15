@@ -5,58 +5,60 @@
       <h2 style="text-align:center;">Physical Activity Questionnaire/Waiver</h2>
 
       <%= form_for @waiver do |f| %>
+
+
 <div class="form-row">
         <div class='form-group col-sm-6'>
           <%= f.label :name, 'Name' %>
-          <%= f.text_field :name, class: 'form-control' %>
+          <%= f.text_field :name, required: true, class: 'form-control input-md form-full' %>
         </div>
 
         <div class='form-group col-sm-6'>
           <%= f.label :dob, 'Birth Date' %>
-          <%= f.text_field :dob, class: 'form-control' %>
+          <%= f.text_field :dob, required: true, class: 'form-control input-md form-full' %>
         </div>
 </div>
 <div class="form-row">
         <div class='form-group col-sm-3'>
           <%= f.label :street, 'Street' %>
-          <%= f.text_field :street, class: 'form-control' %>
+          <%= f.text_field :street, class: 'form-control input-md form-full' %>
         </div>
 
         <div class='form-group col-sm-3'>
           <%= f.label :city, 'City' %>
-          <%= f.text_field :city, class: 'form-control' %>
+          <%= f.text_field :city, class: 'form-control input-md form-full' %>
         </div>
 
         <div class='form-group col-sm-3'>
           <%= f.label :state, 'State' %>
-          <%= f.text_field :state, class: 'form-control' %>
+          <%= f.text_field :state, class: 'form-control input-md form-full' %>
         </div>
 
         <div class='form-group col-sm-3'>
           <%= f.label :zip, 'Zip Code' %>
-          <%= f.text_field :zip, class: 'form-control' %>
+          <%= f.text_field :zip, class: 'form-control input-md form-full' %>
         </div>
 </div>
 <div class="form-row">
         <div class='form-group col-sm-6'>
           <%= f.label :phone, 'Phone Nr' %>
-          <%= f.text_field :phone, class: 'form-control' %>
+          <%= f.text_field :phone, required: true, class: 'form-control input-md form-full' %>
         </div>
 
         <div class='form-group col-sm-6'>
           <%= f.label :email, 'Email' %>
-          <%= f.text_field :email, class: 'form-control' %>
+          <%= f.email_field :email, required: true, class: 'form-control input-md form-full' %>
         </div>
 </div>
 <div class="form-row">
         <div class='form-group col-sm-6'>
           <%= f.label :emergency_contact_name, 'Emergency Contact Name' %>
-          <%= f.text_field :emergency_contact_name, class: 'form-control' %>
+          <%= f.text_field :emergency_contact_name, required: true, class: 'form-control input-md form-full' %>
         </div>
 
         <div class='form-group col-sm-6'>
           <%= f.label :emergency_contact_phone, 'Emergency Contact Phone Nr' %>
-          <%= f.text_field :emergency_contact_phone, class: 'form-control' %>
+          <%= f.text_field :emergency_contact_phone, required: true, class: 'form-control input-md form-full' %>
         </div>
 </div>
 <div>
@@ -110,12 +112,12 @@
 <div class="form-row">
                 <div class='form-group col-sm-6'>
                   <%= f.label :signature, 'Signature' %>
-                  <%= f.text_field :signature, class: 'form-control' %>
+                  <%= f.text_field :signature, required: true, class: 'form-control input-md form-full' %>
                 </div>
 
                 <div class='form-group col-sm-6'>
                   <%= f.label :sign_date, 'Date' %>
-                  <%= f.text_field :sign_date, class: 'form-control' %>
+                  <%= f.text_field :sign_date, required: true, class: 'form-control input-md form-full' %>
                 </div>
 </div>
 
