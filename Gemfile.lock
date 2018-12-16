@@ -314,6 +314,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2.2)
   dalli
+  haml (~> 5.0, >= 5.0.4)
   jbuilder (~> 2.5)
   kaminari
   listen (>= 3.0.5, < 3.2)
@@ -339,4 +340,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.2
+   1.17.1
