@@ -4,8 +4,8 @@
       = f.text_field :name, id: 'form-name', :placeholder => "Your Name", required: true, class: 'input-md form-full'
     .form-group.col-md-6
       = f.email_field :email, id: 'form-email', :placeholder => "Email", required: true, class: 'input-md form-full'
-    .form-group
-        = f.text_area :message, id: 'form-message', :placeholder => "Your Message", :required => true, rows: 7, class: 'input-md form-full'
+  .form-group
+    = f.text_area :message, id: 'form-message', :placeholder => "Your Message", :required => true, rows: 7, class: 'input-md form-full'
     .col-md-12.text-center
-      %button#form-submit.btn-contact-submit.btn.btn-secondary{:name => "submit", :type => "submit"} Submit
+  %button#form-submit.btn-contact-submit.btn.btn-secondary{:name => "submit", :type => "submit"} Submit
  
