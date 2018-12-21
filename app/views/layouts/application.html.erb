@@ -1,11 +1,9 @@
 
-<html lang="en">
+<html lang="en" class="<%= ( current_user.present? ? 'has_current_user' : '' ) %>">
 	<head>
 
 		<title><%= @page_meta[:title] %></title>
-		<meta name="description" content="@page_meta[:description]" />
-    <meta name="description" content= "page_meta[:description]" />
-
+    <meta name="description" content="<%= @page_meta[:description] %>">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,7 +12,7 @@
 
 
 		<%= stylesheet_link_tag 'application' %>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous" >
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
 
 		<!--[if lt IE 9]>
@@ -24,22 +22,17 @@
 
 
 		<%= favicon_link_tag 'favicon.png' %>
-
 		<%= csrf_meta_tags %>
-</head>
-	<body>
 
+	</head>
+		<body style="padding-top: 56px">
 			<%= render 'layouts/navbar' %>
-
-				<%= render 'devise/shared/flash_messages' %>
-
-			<%= yield %>
-
+			<%= render 'devise/shared/flash_messages' %>
+				<%= yield %>
 			<%= render 'layouts/footer' %>
 
-		<%= javascript_include_tag 'application' %>
-		<script>$.FroalaEditor.DEFAULTS.key = '#{Pulitzer.froala_editor_key}'</script>
-		<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bca1aa22636addb" type="text/javascript"</script>
-
-</body>
-    </html>
+			<%= javascript_include_tag 'application' %>
+			<script>$.FroalaEditor.DEFAULTS.key = '#{Pulitzer.froala_editor_key}'</script>
+			<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bca1aa22636addb" type="text/javascript"</script>
+		</body>
+ </html>
