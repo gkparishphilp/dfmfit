@@ -18,20 +18,25 @@
 
 			%hr/
 			/ Copyright Bar
+	.container
 		.row
-			.col-sm-12.text-center
+			.col-sm-6.text-left
 				%p
-					\© #{Time.current.year}
-					= succeed "." do
-						%a{ href: '/' }
-							%b #{Pulitzer.app_name}
-						%a{:href => "https://instagram.com/2120_del_mar"}
-							%i.fab.fa-instagram
-						%a{:href => "https://www.facebook.com/", :target => "_blank"}
-							%i.fab.fa-facebook
-			/ End Copyright Bar
-		/ END FOOTER
-		/ Scroll Top
-		%a.scroll-top
-			%i.fa.fa-angle-double-up
-		/ End Scroll Top
+					© #{Time.current.year}
+					Crossfit2120
+					-#%a{:href => "https://instagram.com/2120_del_mar"}
+						-#%i.fab.fa-instagram
+					-#%a{:href => "https://www.facebook.com/", :target => "_blank"}
+						-#%i.fab.fa-facebook
+				
+			.col-sm-6.text-right
+				%p
+					Designed and coded by Lali
+				/ End Copyright Bar
+			/ END FOOTER
+			/ Scroll Top
+			%a.scroll-top
+				%i.fa.fa-angle-double-up
+			/ End Scroll Top
+
+
