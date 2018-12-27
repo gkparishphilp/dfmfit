@@ -17,11 +17,11 @@ class RootController < ApplicationController
 
 		# get_pulitzer_media is a wrapper on friendly_id that also
 		# handles special cases such as the sitemap & handling redirects
-		return unless get_pulitzer_media( params[:id] )
+	#return unless get_pulitzer_media( params[:id] )
 
 		# pulitzer_render renders while handling custom layouts/views
 		# via media.layout and media.template
-		pulitzer_render( @media )
+	#pulitzer_render( @media )
 	end
 
 
