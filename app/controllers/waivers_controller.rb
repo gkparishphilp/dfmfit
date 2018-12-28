@@ -21,7 +21,6 @@ class WaiversController < ApplicationController
   end
 
 
-
   private
 
   def waiver_params
