@@ -19,9 +19,9 @@
 			%hr/
 			/ Copyright Bar
 	.container
-		.row
-			.col-sm-6.text-left
-				%p
+		.row.pt-60
+			.col-sm-6.float-left
+				%p{:style => "font-size:10px;"}
 					© #{Time.current.year}
 					Crossfit2120
 					-#%a{:href => "https://instagram.com/2120_del_mar"}
@@ -29,8 +29,8 @@
 					-#%a{:href => "https://www.facebook.com/", :target => "_blank"}
 						-#%i.fab.fa-facebook
 				
-			.col-sm-6.text-right
-				%p
+			.col-sm-6.float-right
+				%p{:style => "font-size:10px;"}
 					Designed and coded by Lali
 				/ End Copyright Bar
 			/ END FOOTER
