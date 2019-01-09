@@ -5,15 +5,15 @@
 @import url("./plugin/jquery.fs.tipper.css");
 @import url(//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
 
-/* 
+/*
 * BASIC STYLE
-  - General Style    
-  - Headings Style    
-  - Button Style    
-  - Form Style    
+  - General Style
+  - Headings Style
+  - Button Style
+  - Form Style
   - Spacer Style
-      
-* HEADER 
+
+* HEADER
   - Header Style
   - Logo Style
   - Navigation Menu Style
@@ -35,7 +35,7 @@
   - Client Logo
   - Icon
   - Table
-  
+
 * GLOBAL STYLES
   - Push Menu Style ( Right Sidebar Menu )
   - Search Overlay Menu
@@ -306,11 +306,7 @@ h3 {
     line-height: 32px;
 }
 
-    h3:after {
-        color: #e6ae49;
-        content: ".";
-        font-size: 34px;
-    }
+
 
 h4 {
     font-size: 17px;
