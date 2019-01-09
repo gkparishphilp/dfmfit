@@ -2,7 +2,6 @@
 hr {
 	border-top-color: rgb(38, 43, 48);
 }
-
-h3.section-heading.text-secondary::after {
+h3:after {
 	color: black;
 }
