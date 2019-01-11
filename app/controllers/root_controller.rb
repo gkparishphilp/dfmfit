@@ -9,6 +9,8 @@ class RootController < ApplicationController
 	def index
 		@articles = Pulitzer::Article.published.order( created_at: :desc ).limit( 15 )
 		render layout: 'application'
+		#@promo = Promo.find(params[:id])
+		#redirect_to @promo.url 
 	end
 
 	# this handles all media in the pulitzer_media table
@@ -26,7 +28,7 @@ class RootController < ApplicationController
 	def todays_workout
 		@article = Pulitzer::Article.published.order( created_at: :desc ).limit( 1 ).first
 		redirect_to @article.url
-	end 
+	end
 
 
 

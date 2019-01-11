@@ -15,4 +15,5 @@
 //= require scuttlebutt/application
 //= require jquery_ujs
 //= require custom/application
+//= require_self
 // turbolinks

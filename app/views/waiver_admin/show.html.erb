@@ -1,3 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 style="text-transform: uppercase;text-decoration:underline;text-align:center;"><%= @waiver.name %></h3>
+      <%= @waiver.name %><br>
+      <%= @waiver.dob %>
+      <%= @waiver.street %>
+      <%= @waiver.city %>
+      <%= @waiver.state %>
+      <%= @waiver.zip %>
 
-<%= @waiver.name %>
-<%= @waiver.dob %>
+      <%= @waiver.phone %>
+      <%= @waiver.email %>
+      <%= @waiver.emergency_contact_name %>
+      <%= @waiver.emergency_contact_phone %>
+      <%= @waiver.heart_condition %>
+      <%= @waiver.chest_pain_doing_activity %>
+
+      <%= @waiver.chest_pain_without_doing_activity %>
+      <%= @waiver.lose_balance %>
+      <%= @waiver.bone_problem %>
+      <%= @waiver.prescription_drugs %>
+      <%= @waiver.other_reason_not_to_do_activity %>
+      <%= @waiver.signature %>
+
+      <%= @waiver.sign_date %>
+      <%= @waiver.legal_guardian_name %>
+      <%= @waiver.legal_guardian_signature %>
+      <%= @waiver.legal_guardian_sign_date %>
+
+    </div>
+  </div>
+
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination pagination-sm">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>

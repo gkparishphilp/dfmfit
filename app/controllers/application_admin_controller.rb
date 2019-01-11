@@ -6,8 +6,6 @@ class ApplicationAdminController < ApplicationController
 
 	before_action :authenticate_user!, :require_role
 
-
-
 	protected
 
 		def require_role
@@ -16,9 +14,5 @@ class ApplicationAdminController < ApplicationController
 				return false
 			end
 		end
-
-
-
-
 
 end

@@ -36,18 +36,18 @@
 												%a{ href: pulitzer.edit_article_admin_path( article ) }
 													= article.title
 
-							-#- if authorized?( Pulitzer::Page, controller: Pulitzer::PageAdminController, action: :index )
+							- if authorized?( controller: PromoAdminController, action: :index )
 								%li.dropdown.dropdown-submenu
 									%a.dropdown-toggle{ href: '#', data: { toggle: :dropdown} }
-										Pages
+										Promo
 									%ul.dropdown-menu
 										%li
-											%a{ href: pulitzer.page_admin_index_path }
+											%a{ href: main_app.promo_admin_index_path }
 												%i.fa.fa-gear
 												Admin
-										- if authorized?( Pulitzer::Page, controller: Pulitzer::PageAdminController, action: :create )
+										- if authorized?( controller: PromoAdminController, action: :create )
 											%li
-												%a{ href: '#new_page', data: { toggle: :modal, target: '#new_page' } }
+												%a{ href: main_app.new_promo_admin_path }
 													%i.fa.fa-plus
 													New
 										%li.separator

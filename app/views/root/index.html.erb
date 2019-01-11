@@ -37,3 +37,24 @@
    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.278049744056!2d-117.26649286056403!3d32.970065285535604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc08cdace68b53%3A0x9bd55a37ade876c6!2sCrossfit+2120!5e0!3m2!1sen!2sus!4v1544396902427"></a>
  </small>
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="promo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Title<%= @promo_title %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <p>Promo_text <%= @promo_text %></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

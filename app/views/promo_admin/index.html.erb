@@ -3,23 +3,21 @@
     <div class="col-sm-12">
 
 <table class="table">
-  <h3 style="text-transform: uppercase;text-decoration:underline;text-align:center;">Submitted waivers</h3>
+  <h3 style="text-transform: uppercase;text-decoration:underline;text-align:center;">Promotions</h3>
   <br>
   <thead>
     <tr>
-      <th scope="col">Email</th>
-      <th scope="col">Name</th>
-      <th scope="col">Date of birth</th>
-      <th scope="col">Sign date</th>
+      <th scope="col">Promo</th>
+      <th scope="col">Promo text</th>
+
     </tr>
   </thead>
   <tbody>
-    <% @waivers.each do |waiver| %>
+    <% @promos.each do |promo| %>
     <tr>
 
-      <td><%= link_to waiver.email, waiver_admin_path(waiver) %></td>
-      <td><%= waiver.name %>
-      <td><%= waiver.dob %>
+      <td><%= link_to promo.promo_title, promo_admin_path(promo) %></td>
+      <td class="text-truncate"><%= promo.promo_text%></td>
       <td><%= waiver.created_at %></td>
     </tr>
     <% end %>

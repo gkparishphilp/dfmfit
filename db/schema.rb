@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_025013) do
+ActiveRecord::Schema.define(version: 2019_01_11_010528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -153,6 +153,15 @@ ActiveRecord::Schema.define(version: 2018_11_22_025013) do
     t.index ["token"], name: "index_oauth_credentials_on_token"
     t.index ["uid"], name: "index_oauth_credentials_on_uid"
     t.index ["user_id"], name: "index_oauth_credentials_on_user_id"
+  end
+
+  create_table "promos", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "promo_title"
+    t.text "promo_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_promos_on_user_id"
   end
 
   create_table "pulitzer_categories", force: :cascade do |t|
