@@ -7,8 +7,10 @@
   <br>
   <thead>
     <tr>
-      <th scope="col">Promo</th>
-      <th scope="col">Promo text</th>
+      <th scope="col">Name</th>
+      <th scope="col">Title</th>
+      <th scope="col">Content</th>
+      <th scope="col">Active</th>
 
     </tr>
   </thead>
@@ -16,9 +18,14 @@
     <% @promos.each do |promo| %>
     <tr>
 
-      <td><%= link_to promo.promo_title, promo_admin_path(promo) %></td>
-      <td class="text-truncate"><%= promo.promo_text%></td>
-      <td><%= waiver.created_at %></td>
+      <td><%= link_to promo.name, promo_admin_path(promo) %></td>
+      <td><%= promo.title %></td>
+      <td class="text-truncate"><%= promo.content%></td>
+      <td><%= promo.active? %></td>
+      <td><%= link_to 'Show', promo_admin_path(promo), class: 'badge badge-light' %></td>
+      <td><%= link_to 'Edit', edit_promo_admin_path(promo), class: 'badge badge-light' %></td>
+      <td><%= link_to 'Destroy', promo_admin_path(promo), method: :delete, data: { confirm: 'Are you sure?' }, class: 'badge badge-light' %></td>
+
     </tr>
     <% end %>
   </tbody>

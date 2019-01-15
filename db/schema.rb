@@ -156,12 +156,12 @@ ActiveRecord::Schema.define(version: 2019_01_11_010528) do
   end
 
   create_table "promos", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "promo_title"
-    t.text "promo_text"
+    t.string "name"
+    t.string "title"
+    t.text "content"
+    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_promos_on_user_id"
   end
 
   create_table "pulitzer_categories", force: :cascade do |t|

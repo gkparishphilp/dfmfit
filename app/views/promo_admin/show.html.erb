@@ -1,2 +1,24 @@
-title<%= @promo_title %><br>
-text <%= @promo_text %>
+
+<div class="container pt-80">
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4">
+
+      <p id="notice"><%= notice %></p>
+
+            <strong>Title</strong>
+            <%= @promo.title %>
+          </td>
+
+          <br>
+
+          <td>
+            <strong>Content</strong>
+            <%= @promo.content %>
+          </td>
+
+      <%= link_to 'Edit', edit_promo_admin_path(@promo), class: 'badge badge-light' %> |
+      <%= link_to 'Back', promo_admin_index_path, class: 'badge badge-light' %>
+
+    </div>
+  </div>
+</div>

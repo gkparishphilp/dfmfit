@@ -4,19 +4,26 @@
       <h4 class="section-heading text-secondary" style="text-align: center; padding-top: 50px">Edit promotion</h4>
         <hr class="dark my-4">
 
-      <%= form_for @promo do |f| %>
+      <%= form_for @promo, url: promo_admin_index_path do |f| %>
 
-      <div class='form-group'>
-        <%= form.label :promo_title, 'Promo title' %>
-        <%= form.text_field :promo_title, class: 'form-control' %>
-      </div>
+            <div class='form-group'>
+              <%= f.label :name, 'Promo name' %>
+              <%= f.text_field :name, class: 'form-control' %>
 
+            <div class='form-group'>
+              <%= f.label :title, 'Title' %>
+              <%= f.text_field :title, class: 'form-control' %>
+            </div>
 
+            <div class='form-group'>
+              <%= f.label :content, 'Content' %>
+              <%= f.text_area :content, class: 'form-control' %>
+            </div>
 
-      <div class='form-group'>
-        <%= form.label :promo_text, 'Promo text' %>
-        <%= form.text_area :promo_text, class: 'form-control' %>
-      </div>
+            <div>
+              <%= f.check_box :active %>
+              Active?
+            </div>
 
       <%= f.submit "Submit", class: 'btn btn-secondary' %>
 
