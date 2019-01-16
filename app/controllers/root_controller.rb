@@ -10,7 +10,6 @@ class RootController < ApplicationController
 	def index
  @articles = Pulitzer::Article.published.order( created_at: :desc ).limit( 15 )
 
-
 @promo = Promo.where( active: true ).first
 		render layout: 'application'
 	end
