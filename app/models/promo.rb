@@ -1,6 +1,7 @@
 class Promo < ApplicationRecord
 
-  before_save :set_active
+before_save :set_active
+
 
   private
   def set_active

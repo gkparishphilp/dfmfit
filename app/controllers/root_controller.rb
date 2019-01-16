@@ -3,13 +3,15 @@
 
 class RootController < ApplicationController
 
+
 	include Pulitzer::Concerns::RootConcern
 
 	# this is the homepage!
 	def index
-		@articles = Pulitzer::Article.published.order( created_at: :desc ).limit( 15 )
-		@promo = Promo.last
+ @articles = Pulitzer::Article.published.order( created_at: :desc ).limit( 15 )
 
+
+@promo = Promo.where( active: true ).first
 		render layout: 'application'
 	end
 
@@ -29,7 +31,6 @@ class RootController < ApplicationController
 		@article = Pulitzer::Article.published.order( created_at: :desc ).limit( 1 ).first
 		redirect_to @article.url
 	end
-
 
 
 
