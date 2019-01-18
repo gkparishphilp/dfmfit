@@ -14,6 +14,7 @@ class WaiversController < ApplicationController
     if @waiver.save
       flash[:success] = "Your waiver was successfully signed."
       redirect_to thank_you_waivers_path
+      WaiverMailer.waiver_notification(@waiver).deliver
     else
       render 'new'
     end

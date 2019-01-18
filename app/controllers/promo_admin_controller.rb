@@ -41,7 +41,7 @@ class PromoAdminController < ApplicationAdminController
   def destroy
     @promo = Promo.find(params[:id])
     @promo.destroy
-    flash[:primary] = "Promotion was successfully deleted."
+    flash[:success] = "Promotion was successfully deleted."
     redirect_to promo_admin_index_path
   end
 

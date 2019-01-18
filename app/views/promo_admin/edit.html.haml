@@ -1,0 +1,37 @@
+.container-fluid
+	.row
+		.col-xs-10
+			%ul.breadcrumb
+				%li
+					= link_to 'Admin', main_app.admin_index_path
+				%li
+					= link_to 'Promo Admin', promo_admin_index_path
+				%li
+					%strong
+						Edit promo
+						= @promo_title
+
+	= form_for @promo, url: promo_admin_path( @promo ) do |f|
+
+
+		.row
+			.col-xs-8
+				.form-group
+					= f.label :"Name"
+					= f.text_field :name, class: 'form-control input-lg'
+				.form_group
+					=f.label :"Title"
+					= f. text_field :title, class: 'form-control input-lg'
+
+
+				.form-group
+					= f.label :"Content"
+					= f.text_area :content, class: 'form-control wysiwyg', data: { wysiwyg: { height_min: 200, toolbar_sticky: true, toolbar_preset: 'admin_default', object_class: @promo.class.base_class.name, object_id: @promo.id }.to_json }
+				.form-group
+					= f.check_box :active
+					Active?
+			.col-xs-4
+				.well
+
+					.form-group
+						= f.submit 'Update promo', class: 'btn btn-primary'

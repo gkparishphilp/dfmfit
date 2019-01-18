@@ -5,7 +5,7 @@
 				%li
 					= link_to 'Admin', main_app.admin_index_path
 				%li
-					= link_to 'Workout Admin', new_promo_admin_path
+					= link_to 'Promo Admin', new_promo_admin_path
 				%li
 					%strong
 						New promo
@@ -15,13 +15,17 @@
 				%i.fa.fa-eye
 				Preview
 
-	= form_for :promo, url: new_promo_admin_path, action: :create do |f|
+	= form_for :promo, url: promo_admin_index_path, action: :create do |f|
 
 
 		.row
 			.col-xs-8
 				.form-group
-					= f.text_field :promo_title, class: 'form-control input-lg'
+					= f.label :"Name"
+					= f.text_field :name, class: 'form-control input-lg'
+				.form_group
+					=f.label :"Title"
+					= f. text_field :title, class: 'form-control input-lg'
 				-#.form-group
 					= f.label :subtitle
 					= f.text_field :subtitle, class: 'form-control'
@@ -69,9 +73,11 @@
 					= f.text_area :description, class: 'form-control wysiwyg', data: { wysiwyg: { height_min: 100, toolbar_sticky: false, toolbar_preset: 'admin_default', object_class: @article.class.base_class.name, object_id: @article.id }.to_json }
 
 				.form-group
-					= f.text_area :promo_text, class: 'form-control wysiwyg', data: { wysiwyg: { height_min: 200, toolbar_sticky: true, toolbar_preset: 'admin_default', object_class: @promo.class.base_class.name, object_id: @promo.id }.to_json }
-
-
+					= f.label :"Content"
+					= f.text_area :content, class: 'form-control wysiwyg', data: { wysiwyg: { height_min: 200, toolbar_sticky: true, toolbar_preset: 'admin_default', object_class: @promo.class.base_class.name, object_id: @promo.id }.to_json }
+				.form-group
+					= f.check_box :active
+					Active?
 			.col-xs-4
 				.well
 					-#.form-group
