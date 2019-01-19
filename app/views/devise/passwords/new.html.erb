@@ -4,10 +4,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4 offset-sm-4">
-      <h3 style="text-align:center;font-family:'Raleway',sans-serif;">Forgot your password?</h3>
 
+<h4 class="section-heading text-secondary" style="text-align: center; padding-top: 50px">Forgot your password?</h4>
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      
+
 
       <%= render 'devise/shared/error_messages' %>
 
@@ -18,11 +18,13 @@
 
         <%= f.submit "Send me reset instructions", class: 'btn btn-secondary' %>
 
-        <p style="font-weight: bold">New User? <%=link_to 'Sign Up Now', new_user_registration_path, class: 'btn btn-link' %></p>
+        <!--<p style="font-weight: bold">New User? <%=link_to 'Sign Up Now', new_user_registration_path, class: 'btn btn-link' %></p>-->.
         <p style="font-weight: bold">Existing User? <%=link_to 'Sign In Now', user_session_path, class: 'btn btn-link' %></p>
-        <%= link_to "Back", :back, class: 'badge badge-light' %>
+        <!--<%= link_to "Back", :back, class: 'badge badge-light' %>-->.
 
       <% end %>
+      <br>
+  
     </div>
   </div>
 </div>

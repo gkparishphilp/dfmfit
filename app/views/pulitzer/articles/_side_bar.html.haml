@@ -25,7 +25,7 @@
 				%a Portfolio
 	- if ( recent_articles = Pulitzer::Article.published.where.not( id: @media.try(:id) ).order(publish_at: :desc).limit(3) ).present?
 		.sidebar-widget
-			%h5 Recent Post
+			%h5 Recent Posts
 			%hr/
 			%ul.widget-post
 				- recent_articles.each do |media|

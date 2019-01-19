@@ -1,24 +1,39 @@
-
-<div class="container pt-80">
+<div class="container">
   <div class="row">
-    <div class="col-sm-4 offset-sm-4">
+    <div class="col-sm-4">    
+              <table class="table table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Name</th>
+                  <td><%= @promo.name %></td>
+                </tr>
 
-      <p id="notice"><%= notice %></p>
+                <tr>
+                  <th scope="row">Title</th>
+                  <td><%= @promo.title %></td>
+                </tr>
 
-            <strong>Title</strong>
-            <%= @promo.title %>
-          </td>
+                <tr>
+                  <th scope="row">Content</th>
+                  <td><%= @promo.content %></td>
+                </tr>
 
-          <br>
+                <tr>
+                  <th scope="row">Active?</th>
+                  <td><%= @promo.active %></td>
+                </tr>
 
-          <td>
-            <strong>Content</strong>
-            <%= @promo.content %>
-          </td>
+              </tbody>
+            </table>
+            <%= link_to 'Edit', edit_promo_admin_path(@promo), class: 'badge badge-light' %> |
+            <%= link_to 'Back', promo_admin_index_path, class: 'badge badge-light' %>
 
-      <%= link_to 'Edit', edit_promo_admin_path(@promo), class: 'badge badge-light' %> |
-      <%= link_to 'Back', promo_admin_index_path, class: 'badge badge-light' %>
-
-    </div>
-  </div>
+</div>
+</div>
 </div>

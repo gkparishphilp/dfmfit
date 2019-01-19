@@ -3,12 +3,10 @@
 	/ Intro Section
 	- if @media.cover_image.present?
 		/ Intro Section
-
 		%section.inner-intro.dark-bg.bg-image.overlay-dark.parallax.parallax-background1{"data-background-img" => @media.cover_image }
 			.container
 				.row.title
-					%h3.h3=@media.title
-
+					%h2.h2=@media.title
 					-#.page-breadcrumb
 						%a{ href: '/' }> Home
 						\/
@@ -18,12 +16,10 @@
 		/ End Intro Section
 	- else
 		/ Intro Section
-		%section{:style => "padding-top:50px"}
+		%section.inner-intro.dark-bg.bg-image.overlay-dark.parallax.parallax-background1
 			.container
 				.row.title
-					%h3.h3=@media.title
-					
-
+					%h2.h2=@media.title
 					-#.page-breadcrumb
 						%a{ href: '/' }> Home
 						\/
@@ -34,7 +30,7 @@
 
 	/ End Intro Section
 	/ Blog Post Section
-	%section.pb-40{:style => "padding-top:40px"}
+	%section.ptb.ptb-sm-80
 		.container
 			.row
 				/ Post Bar
