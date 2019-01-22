@@ -1,5 +1,5 @@
 class WaiverMailer < ActionMailer::Base
-  default from: "https://crossfit2120.herokuapp.com/"
+  default from: "info@crossfit2120.com"
 
 
   def waiver_notification(waiver)
