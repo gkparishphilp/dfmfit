@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 	resources :admin
 	resources :events
-	resources :workout
+	resources :todays_workout
 	resources :waivers do
 		get :thank_you, on: :collection
 	end
