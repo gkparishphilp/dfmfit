@@ -1,0 +1,61 @@
+- cache( "#{@media.cache_key}-#{current_user.present?}", expires_in: 1.hour ) do
+	/ CONTENT -------------------------------------------------------------------------------
+	/ Intro Section
+	- if @media.cover_image.present?
+		/ Intro Section
+
+		%section.inner-intro.dark-bg.bg-image.overlay-dark.parallax.parallax-background1{"data-background-img" => @media.cover_image }
+			.container
+				.row.title
+					%h3.h3=@media.title
+
+					-#.page-breadcrumb
+						%a{ href: '/' }> Home
+						\/
+						%a{ href: pulitzer.articles_path() }> Blog
+						\/
+						%span Post
+		/ End Intro Section
+	- else
+		/ Intro Section
+		%section{:style => "padding-top:50px"}
+			.container
+				.row.title
+					%h4.section-heading.text-secondary=@media.title
+
+
+	/ Blog Post Section
+	%section.pb-40{:style => "padding-top:40px"}
+		.container
+			.row
+				/ Post Bar
+				.col-lg-9.col-md-9.blog-post-hr
+
+					.blog-post.mb-30
+						.post-meta
+							- if @media.user.present?
+								%span
+									by
+									= succeed "," do
+										- if @media.user.respond_to? :url
+											%a{ href: @media.user.url }=@media.user.full_name
+										- else
+											=@media.user.full_name
+							%span=@media.publish_at.strftime('%B %e, %Y')
+
+						.post-entry.fr-view
+							= raw @media.content
+						.post-tag.pull-left
+							- @media.tags.each do |tag|
+								%span
+									%a{ href: pulitzer.articles_path( tagged: tag ) }>=tag
+									- unless tag == @media.tags.last
+										,
+					-#= render 'application/social', object: @media, args: { page: params[:page] }
+
+
+				/ End Post Bar
+				-#= render 'pulitzer/articles/side_bar'
+	/ End Blog Post Section
+	= render 'pulitzer/articles/next_prev_bar'
+	/ End CONTENT ----------------------------------------------------------------------------

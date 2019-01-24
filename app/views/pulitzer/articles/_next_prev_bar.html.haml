@@ -8,9 +8,9 @@
 					.prev-btn
 						%i.fa.fa-angle-left
 					.item-prev-text.xs-hidden
-						%h6 Prev Post
+						%h6 Prev workout
 			%a.item-all-view{ href: pulitzer.articles_path() }
-				%h6 Blog Page
+				%h6 Recent Workouts
 			- if (next_media = Pulitzer::Article.published.where('publish_at > ?', @media.publish_at).order(id: :asc).first).present?
 				%a.item-next{:href => next_media.url}
 					.next-btn

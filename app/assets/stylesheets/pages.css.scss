@@ -2,6 +2,11 @@
 hr {
 	border-top-color: #007bff;
 }
+
+hr.dark {
+		border-top: 1px solid #007bff;
+}
+
 h3:after {
 	color: black;
 }
