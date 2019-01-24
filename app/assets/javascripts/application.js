@@ -14,6 +14,6 @@
 //= require app_theme/app_theme_multipage
 //= require scuttlebutt/application
 //= require jquery_ujs
-//= require custom/application
+//= require custom/promo_popper
 //= require_self
 // turbolinks
