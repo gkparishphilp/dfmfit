@@ -9,12 +9,6 @@
 				.row.title
 					%h4.section-heading.text-secondary=@media.title
 
-					-#.page-breadcrumb
-						%a{ href: '/' }> Home
-						\/
-						%a{ href: pulitzer.articles_path() }> Blog
-						\/
-						%span Post
 		/ End Intro Section
 	- else
 		/ Intro Section
@@ -47,5 +41,5 @@
 
 								-#= render 'pulitzer/articles/side_bar'
 					/ End Blog Post Section
-					= render 'pulitzer/articles/next_prev_bar'
+		= render 'pulitzer/articles/next_prev_bar'
 	/ End CONTENT ----------------------------------------------------------------------------
