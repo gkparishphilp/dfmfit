@@ -1,6 +1,6 @@
 
 / Post Next Prev Bar
-%section.mb-60
+%section.mb-20
 	.container
 		.item-nav
 			- if (previous_media = Pulitzer::Article.published.where('publish_at < ?', @media.publish_at).order(id: :desc).first).present?
