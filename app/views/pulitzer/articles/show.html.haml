@@ -12,12 +12,12 @@
 		/ End Intro Section
 	- else
 		/ Intro Section
-		%section{:style => "padding-top:50px"}
+		%section{:style => "padding-top:50px; font-family: 'Raleway', sans-serif"}
 			.container
 				.row
 					.col-lg-3.col-md-3
 						%h4.section-heading.text-secondary=@media.title
-						.blog-post.mb-30
+						.blog-post.mb-30{:style => "padding-top:10px"}
 							.post-meta
 								- if @media.user.present?
 									%span
@@ -28,6 +28,7 @@
 											- else
 												=@media.user.full_name
 									%span=@media.publish_at.strftime('%B %e, %Y')
+									%br
 
 							.post-entry.fr-view
 								= raw @media.content
