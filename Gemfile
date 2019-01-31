@@ -48,6 +48,10 @@ gem 'kaminari'
 gem 'memcachier'
 gem 'route_downcaser'
 
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+
+
 # dev
 swell_engines_path = ENV['SWELL_ENGINE_PATH'] || '../engines'
 
