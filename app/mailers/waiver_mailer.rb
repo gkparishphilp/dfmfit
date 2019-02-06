@@ -4,7 +4,7 @@ class WaiverMailer < ActionMailer::Base
 
   def waiver_notification(waiver)
     @waiver = waiver
-   mail(to: "lali20021@gmail.com",
+   mail(to: "dan@crossfit2120.com",
         subject: 'New signed waiver at Crossfit2120')
  end
 end
