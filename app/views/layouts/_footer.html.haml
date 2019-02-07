@@ -1,5 +1,5 @@
 / FOOTER
-%footer.footer.navbar-expand-lg.navbar-dark.bg-dark.fixed-bottom
+%footer.footer.navbar-dark.bg-dark.pt-5
 
 	.container
 		= render 'root/mailer'
@@ -19,7 +19,7 @@
 			%hr/
 			/ Copyright Bar
 	.container
-		.row.pt-60
+		.pt-60
 			.col-sm-6.float-left
 				%p{:style => "font-size:10px;"}
 					© #{Time.current.year}
@@ -28,8 +28,8 @@
 						-#%i.fab.fa-instagram
 					-#%a{:href => "https://www.facebook.com/", :target => "_blank"}
 						-#%i.fab.fa-facebook
-				
-			.col-sm-6.float-right
+
+			.col-sm-6
 				%p{:style => "font-size:10px;"}
 					Designed and coded by Lali
 				/ End Copyright Bar
@@ -38,5 +38,3 @@
 			%a.scroll-top
 				%i.fa.fa-angle-double-up
 			/ End Scroll Top
-
-
