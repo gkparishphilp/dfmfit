@@ -20,21 +20,22 @@
 			/ Copyright Bar
 	.container
 		.pt-60
-			.col-sm-6.float-left
-				%p{:style => "font-size:10px;"}
-					© #{Time.current.year}
-					Crossfit2120
-					-#%a{:href => "https://instagram.com/2120_del_mar"}
-						-#%i.fab.fa-instagram
-					-#%a{:href => "https://www.facebook.com/", :target => "_blank"}
-						-#%i.fab.fa-facebook
+			.row
+				.col-sm-6.float-left
+					%p{:style => "font-size:10px;"}
+						© #{Time.current.year}
+						Crossfit2120
+						-#%a{:href => "https://instagram.com/2120_del_mar"}
+							-#%i.fab.fa-instagram
+						-#%a{:href => "https://www.facebook.com/", :target => "_blank"}
+							-#%i.fab.fa-facebook
 
-			.col-sm-6
-				%p{:style => "font-size:10px;"}
-					Designed and coded by Lali
-				/ End Copyright Bar
-			/ END FOOTER
-			/ Scroll Top
-			%a.scroll-top
-				%i.fa.fa-angle-double-up
-			/ End Scroll Top
+				.col-sm-6
+					%p{:style => "font-size:10px; text-align: end;"}
+						Designed and coded by Lali
+					/ End Copyright Bar
+				/ END FOOTER
+				/ Scroll Top
+				%a.scroll-top
+					%i.fa.fa-angle-double-up
+				/ End Scroll Top
