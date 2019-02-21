@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 	end
 	resources :waiver_admin
 	resources :logs
-	resources :contacts
+	resources :contacts do
+		get :thank, on: :collection
+	end
 	resources :promo_admin
 
 
