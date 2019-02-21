@@ -16,4 +16,5 @@
 //= require jquery_ujs
 //= require custom/promo_popper
 //= require_self
+//= require custom/active_tab
 // turbolinks
