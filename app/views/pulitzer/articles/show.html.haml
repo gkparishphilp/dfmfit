@@ -10,37 +10,37 @@
 					%h4.section-heading.text-secondary=@media.title
 
 		/ End Intro Section
-	- else
-		/ Intro Section
-		%section{:style => "padding-top:50px; font-family: 'Raleway', sans-serif"}
-			.container
-				.row
-					.col-lg-3.col-md-3
-						%h4.section-heading.text-secondary=@media.title
-						.blog-post.mb-30{:style => "padding-top:10px"}
-							.post-meta
-								- if @media.user.present?
-									%span
-										by
-										= succeed "," do
-											- if @media.user.respond_to? :url
-												%a{ href: @media.user.url }=@media.user.full_name
-											- else
-												=@media.user.full_name
-									%span=@media.publish_at.strftime('%B %e, %Y')
-									%br
 
-							.post-entry.fr-view
-								= raw @media.content
-							.post-tag.pull-left
-								- @media.tags.each do |tag|
-									%span
-										%a{ href: pulitzer.articles_path( tagged: tag ) }>=tag
-										- unless tag == @media.tags.last
-											,
-									-#= render 'application/social', object: @media, args: { page: params[:page] }
+	/ Intro Section
+	%section{:style => "padding-top:50px; font-family: 'Raleway', sans-serif"}
+		.container
+			.row
+				.col-12
+					%h4.section-heading.text-secondary=@media.title
+					.blog-post.mb-30{:style => "padding-top:10px"}
+						.post-meta
+							- if @media.user.present?
+								%span
+									by
+									= succeed "," do
+										- if @media.user.respond_to? :url
+											%a{ href: @media.user.url }=@media.user.full_name
+										- else
+											=@media.user.full_name
+								%span=@media.publish_at.strftime('%B %e, %Y')
+								%br
 
-								-#= render 'pulitzer/articles/side_bar'
-					/ End Blog Post Section
+						.post-entry.fr-view
+							= raw @media.content
+						.post-tag.pull-left
+							- @media.tags.each do |tag|
+								%span
+									%a{ href: pulitzer.articles_path( tagged: tag ) }>=tag
+									- unless tag == @media.tags.last
+										,
+								-#= render 'application/social', object: @media, args: { page: params[:page] }
+
+							-#= render 'pulitzer/articles/side_bar'
+				/ End Blog Post Section
 		= render 'pulitzer/articles/next_prev_bar'
 	/ End CONTENT ----------------------------------------------------------------------------
