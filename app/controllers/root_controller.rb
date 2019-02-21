@@ -27,8 +27,8 @@ class RootController < ApplicationController
 	end
 
 	def todays_workout
-		@article = Pulitzer::Article.published.order( created_at: :desc ).limit( 1 ).first
-		redirect_to @article.url
+		@media = Pulitzer::Article.published.order( created_at: :desc ).limit( 1 ).first
+		render @media.template, layout: @media.layout
 	end
 
 
