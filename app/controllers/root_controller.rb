@@ -26,7 +26,7 @@ class RootController < ApplicationController
 		pulitzer_render( @media )
 	end
 
-	def todays_workout
+	def wod
 		@media = Pulitzer::Article.published.order( created_at: :desc ).limit( 1 ).first
 		render @media.template, layout: @media.layout
 	end

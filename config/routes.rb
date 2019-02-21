@@ -36,7 +36,7 @@ Rails.application.routes.draw do
 	mount Pulitzer::Engine, at: '/'
 	mount Scuttlebutt::Engine, at: '/'
 
-	get '/todays_workout', to: 'root#todays_workout'
+	get '/wod', to: 'root#wod'
 
 	# quick catch-all route for static pages set root route to field any media
 	get '/:id', to: 'root#show', as: 'root_show'
