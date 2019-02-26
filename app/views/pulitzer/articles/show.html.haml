@@ -19,16 +19,8 @@
 					%h4.section-heading.text-secondary=@media.title
 					.blog-post.mb-30{:style => "padding-top:10px"}
 						.post-meta
-							- if @media.user.present?
-								%span
-									by
-									= succeed "," do
-										- if @media.user.respond_to? :url
-											%a{ href: @media.user.url }=@media.user.full_name
-										- else
-											=@media.user.full_name
-								%span=@media.publish_at.strftime('%B %e, %Y')
-								%br
+							%span=@media.publish_at.strftime('%B %e, %Y')
+							%br
 
 						.post-entry.fr-view
 							= raw @media.content
