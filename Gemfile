@@ -49,8 +49,8 @@ gem 'memcachier'
 gem 'newrelic_rpm'
 gem 'route_downcaser'
 
-gem 'will_paginate', '~> 3.1', '>= 3.1.6'
-gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+# gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+# gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 
 # dev
