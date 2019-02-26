@@ -1,7 +1,7 @@
 class WaiverAdminController < ApplicationAdminController
 
   def index
-    @waivers = Waiver.paginate(:page => params[:page], :per_page => 15)
+    @waivers = Waiver.page( params[:page] )
 
   end
 
