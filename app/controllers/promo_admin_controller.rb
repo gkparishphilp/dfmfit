@@ -1,7 +1,7 @@
 class PromoAdminController < ApplicationAdminController
 
   def index
-    @promos = Promo.paginate(page: params[:page], per_page: 15)
+    @promos = Promo.page(params[:page] )
   end
 
   def show
