@@ -46,6 +46,7 @@ gem 'sitemap_generator'
 gem 'dalli'
 gem 'kaminari'
 gem 'memcachier'
+gem 'newrelic_rpm'
 gem 'route_downcaser'
 
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
