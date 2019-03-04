@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 		get :thank, on: :collection
 	end
 	resources :promo_admin
+	resources :contact_admin 
 
 
 	get 'pages/about'

@@ -5,8 +5,10 @@
 
         <h3>Welcome <%= current_user %></h3>
 
-         
+
          To see all waivers --> <%= link_to 'Submitted waivers',  waiver_admin_index_path, class: 'btn btn-lg btn-outline-primary' %>
+         <br>
+        To see people who filled out contact form --> <%= link_to 'Contact form', contact_admin_index_path, class: 'btn btn-lg btn-outline-primary' %>
       </div>
     </div>
   </div>

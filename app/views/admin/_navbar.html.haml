@@ -55,6 +55,26 @@
 											%li
 												%a{ href: pulitzer.edit_page_admin_path( page ) }
 													= page.title
+
+							- if authorized?( controller: WaiverAdminController, action: :index )
+								%li.dropdown.dropdown-submenu
+									%a.dropdown-toggle{ href: '#', data: { toggle: :dropdown} }
+										Submitted waivers
+									%ul.dropdown-menu
+										%li
+											%a{ href: main_app.waiver_admin_index_path }
+												%i.fa.fa-gear
+												Admin
+							- if authorized?( controller: ContactAdminController, action: :index )
+								%li.dropdown.dropdown-submenu
+									%a.dropdown-toggle{ href: '#', data: { toggle: :dropdown} }
+										Messengers
+									%ul.dropdown-menu
+										%li
+											%a{ href: main_app.contact_admin_index_path }
+												%i.fa.fa-gear
+												Admin
+
 				- if defined?( SwellId ) && authorized?( User, controller: SwellId::UserAdminController, action: :index )
 					%li.dropdown
 						%a.dropdown-toggle{ href: swell_id.user_admin_index_path() }

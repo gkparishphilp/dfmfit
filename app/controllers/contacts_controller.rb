@@ -6,6 +6,8 @@ def new
 
 def create
   @contact = Contact.new(contact_params)
+  @user = User.find_or_create_by( email: params[:contact][:email] )
+  @contact.user = @user
   if @contact.save
     redirect_to thank_contacts_path
     name = params[:contact][:name]

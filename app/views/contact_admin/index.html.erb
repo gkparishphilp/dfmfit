@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+<table class="table">
+  <h3 style="text-transform: uppercase;text-decoration:underline;text-align:center;">Contact form</h3>
+  <br>
+  <thead>
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact| %>
+    <tr>
+
+      <td><%= link_to contact.email, contact_admin_path(contact) %></td>
+      <td><%= contact.name %>
+      <td><%= contact.created_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+</div>
+</div>
+<%= raw paginate @contacts %>
