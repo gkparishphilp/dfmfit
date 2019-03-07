@@ -1,0 +1,2 @@
+production:
+  data-sitekey: <%= ENV['SITE_KEY'] %>
