@@ -10,4 +10,6 @@ Pulitzer.configure do |config|
 
 	config.froala_editor_key = ENV['FROALA_EDITOR_KEY']
 
+	config.asset_host = 'https://cdn1.crossfit2120.com'
+
 end
