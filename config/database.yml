@@ -6,8 +6,8 @@ default: &default
 development:
   <<: *default
   database: <%= ENV["DEV_DATABASE"] || 'pulitzer_development' %>
-  username: <%= ENV["DEV_DATABASE_USERNAME"] || 'lalibear' %>
-  password: <%= ENV["DEV_DATABASE_PASSWORD"] || 'lali1984' %>
+  username: <%= ENV["DEV_DATABASE_USERNAME"] || '' %>
+  password: <%= ENV["DEV_DATABASE_PASSWORD"] || '' %>
   host: <%= ENV["DEV_DATABASE_HOST"] || '127.0.0.1' %>
   port: <%= ENV["DEV_DATABASE_PORT"] || '5435' %>
 

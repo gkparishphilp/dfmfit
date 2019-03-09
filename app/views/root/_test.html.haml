@@ -1,18 +1,11 @@
-%head
-  %script{:async => "", :defer => "defer", :src => "https://www.google.com/recaptcha/api.js?render=explicit"}
-  :javascript
-    function onSubmit(token) {
-        document.getElementById("form-submit").submit();
-      }
-%body
-  = form_for :contact, :url => main_app.contacts_path do |f|
-    .form-row
-      .form-group.col-md-6
-        = f.text_field :name, id: 'form-name', :placeholder => "Your Name", required: true, class: 'input-md form-full'
-      .form-group.col-md-6
-        = f.email_field :email, id: 'form-email', :placeholder => "Email", required: true, class: 'input-md form-full'
-    .form-group
-      = f.text_area :message, id: 'form-message', :placeholder => "Your Message", :required => true, rows: 7, class: 'input-md form-full'
-      .col-md-12.text-center
-    %button.g-recaptcha#form-submit.btn-contact-submit.btn.btn-lg.btn-outline-primary{:name => "submit", :type => "submit", "data-callback" => "onSubmit", "data-sitekey" => ENV['SITE_KEY']} Contact us
-    %br
+= form_for :contact, :url => main_app.contacts_path do |f|
+  .form-row
+    .form-group.col-md-6
+      = f.text_field :name, id: 'form-name', :placeholder => "Your Name", required: true, class: 'input-md form-full'
+    .form-group.col-md-6
+      = f.email_field :email, id: 'form-email', :placeholder => "Email", required: true, class: 'input-md form-full'
+  .form-group
+    = f.text_area :message, id: 'form-message', :placeholder => "Your Message", :required => true, rows: 7, class: 'input-md form-full'
+    .col-md-12.text-center
+    = recaptcha_tags
+  %button#form-submit.btn-contact-submit.btn.btn-lg.btn-outline-primary{:name => "submit", :type => "submit", "data-callback" => "onSubmit", "data-sitekey" => ENV['SITE_KEY']} Contact us
