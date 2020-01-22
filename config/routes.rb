@@ -10,11 +10,11 @@ Rails.application.routes.draw do
 	end
 	resources :waiver_admin
 	resources :logs
-	resources :contacts do
-		get :thank, on: :collection
-	end
+	# resources :contacts do
+	# 	get :thank, on: :collection
+	# end
 	resources :promo_admin
-	resources :contact_admin 
+	resources :contact_admin
 
 
 	get 'pages/about'
