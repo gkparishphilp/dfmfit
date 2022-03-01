@@ -44,7 +44,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'sitemap_generator'
 gem 'fog-aws'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem "aws-sdk-s3", require: false
 gem 'dalli'
 gem 'kaminari'
